@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import Link from 'next/link';
 
 function Card ({ project }) {
 
@@ -12,6 +13,10 @@ function Card ({ project }) {
             <div className="body">
                 <h3>{project.title}</h3>
                 <p dangerouslySetInnerHTML={{ __html: project.description}} />
+
+                <Link href="/projects/[slug]" as={`/projects/${project.slug}`}>
+                    <a>More about this project...</a>
+                </Link>
             </div>
         </CardStyled>
     )
@@ -37,6 +42,10 @@ const CardStyled = styled.div`
         p {
             color: #666666;
             line-height: 1.5;
+        }
+        a {
+            display: inline-block;
+            margin: 20px 0;
         }
     }
 `

@@ -8,8 +8,8 @@ const Home = ({ projects }) => {
 
     return (
         <Box variant="container">
-            <Box sx={{ textDecoration: 'underline' }}my={30} as='h2'>Projects</Box>
-            <Flex sx={{ gridGap: 5 }} flexDirection={{ _: 'column', 1: 'row', 2: 'row' }}>
+            <Box sx={{ textDecoration: 'underline' }} my={20} as='h2'>Projects</Box>
+            <Flex sx={{ gridGap: 5 }} flexDirection={{ _: 'column', 1: 'row', 2: 'row' }} mt={-20} mb={50}>
                 {projects.map(project => (
                     <Box key={project.id} width={{ _: '100%', 2: '50%' }}>
                         <Card project={project}/>

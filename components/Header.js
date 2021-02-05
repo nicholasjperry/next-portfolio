@@ -2,13 +2,20 @@ import styled from '@emotion/styled';
 import { rem } from 'polished';
 import { Flex, Box } from 'reflexbox';
 import Navigation from 'components/Navigation';
+import ToggleNavigationColorButton from 'components/ToggleNavigationColorButton';
 
 
-function Header({ isDark, navigation }) {
+function Header({ isDark }) {
     return (
-        <HeaderStyled isDark={isDark, navigation}>
+        <HeaderStyled isDark={isDark}>
             <Box className="container">
-                <Navigation navigation={navigation}/>
+                <Flex>
+                    <Navigation />
+                    <Box sx={{ marginLeft: "auto" }}>
+                        <ToggleNavigationColorButton />
+                    </Box>
+                </Flex>
+                
             </Box>
         </HeaderStyled>
     );
