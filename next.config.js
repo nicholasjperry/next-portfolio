@@ -2,6 +2,13 @@ const path = require('path')
 require('dotenv').config()
 
 module.exports = {
+
+    exportPathMap: async function() {
+        const paths = {
+          '/': { page: '/' }
+        };
+        return paths; //<--this was missing previously
+    },
     
     env: {
         API_URL: process.env.API_URL
