@@ -20,7 +20,7 @@ const Home = ({ projects }) => {
     );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     const { API_URL } = process.env
 
     const res = await fetch(`${API_URL}/projects`)
