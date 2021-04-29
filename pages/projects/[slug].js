@@ -32,7 +32,7 @@ function Project({ project }) {
 
 const { publicRuntimeConfig } = getConfig();
 
-export async function getServerSideProps(context) {
+export async function getStaticProps(context) {
 
     const { slug } = context.query;
     const res = await fetch(`${publicRuntimeConfig.API_URL}/projects?slug=${slug}`);
