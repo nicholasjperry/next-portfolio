@@ -20,7 +20,7 @@ function MyApp({ Component, pageProps, navigation }) {
             <ThemeProvider theme={theme}>
                 <GlobalStyles />
                 <ContextWrapper navigation={navigation}>
-                    <Header isDark/>
+                    <Header isLight/>
                 </ContextWrapper>
                 <Component {...pageProps} />
             </ThemeProvider>

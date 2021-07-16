@@ -1,36 +1,26 @@
-import fetch from 'isomorphic-unfetch';
-import Card from 'components/Card';
-import { Flex, Box } from 'reflexbox';
+import styled from '@emotion/styled';
+import { Box } from 'reflexbox';
 
-const Home = ({ projects }) => {
-
-    console.log(projects)
-
+const Home = () => {
     return (
-        <Box variant="container">
-            <Box sx={{ textDecoration: 'underline' }} my={20} as='h2'>Projects</Box>
-            <Flex sx={{ gridGap: 5 }} flexDirection={{ _: 'column', 1: 'row', 2: 'row' }} mt={-20} mb={50}>
-                {projects.map(project => (
-                    <Box key={project.id} width={{ _: '100%', 2: '50%' }}>
-                        <Card project={project}/>
-                    </Box>
-                ))}
-            </Flex>
-        </Box> 
+        <>
+            <HomeStyled>
+                <Box className='welcome-text' as='h1'>Welcome to my Portfolio Website!</Box>
+                <p>Browse my projects, read about my background, and feel free to contact me!</p>
+            </HomeStyled>
+        </>
     );
 }
 
-export async function getServerSideProps() {
-    const { API_URL } = process.env
-
-    const res = await fetch(`${API_URL}/projects`)
-    const data = await res.json()
-
-    return {
-        props: {
-            projects: data
-        }
+const HomeStyled = styled.div`
+    .welcome-text {
+        text-align: center;
+        margin-top: 17%;
     }
-}
+    p {
+        text-align: center;
+        color: #DEDEDE;
+    }
+`
 
 export default Home;

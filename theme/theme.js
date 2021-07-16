@@ -9,17 +9,17 @@ breakpoints.xl = breakpoints[3]
 breakpoints.xxl = breakpoints[4]
 
 export default {
-    colors: {
-        primary: '#efefef'
-    },
+    // colors: {
+    //     primary: '#efefef'
+    // },
     
     variants: {
-        container: {
-            mx: 'auto',
-            maxWidth: 1200,
-            width: '100%',
-            px: 30
-        }
+        // container: {
+        //     mx: 'auto',
+        //     maxWidth: 1200,
+        //     width: '100%',
+        //     px: 30
+        // }
     },
     breakpoints
 }
