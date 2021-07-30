@@ -53,7 +53,7 @@ const NavigationStyled = styled.div`
         padding: 0;
         margin: 0;
         display: flex;
-        float: right;
+        justify-content: center;
 
         li {
             margin-left: 50px;

@@ -1,9 +1,9 @@
 import styled from '@emotion/styled';
-import fetch from 'isomorphic-unfetch';
-import Card from 'components/Card';
 import { Flex, Box } from 'reflexbox';
+import Card from 'components/Card';
+import fetch from 'isomorphic-unfetch';
 
-function Projects( {projects} ) {
+function Projects({projects}) {
     return(
         <ProjectsStyled>
             <h1>My Projects</h1>
@@ -21,10 +21,10 @@ function Projects( {projects} ) {
 }
 
 export async function getServerSideProps() {
-    const { API_URL } = process.env
+    const { API_URL } = process.env;
 
-    const res = await fetch(`${API_URL}/projects`)
-    const data = await res.json()
+    const res = await fetch(`${API_URL}/projects`);
+    const data = await res.json();
 
     return {
         props: {
