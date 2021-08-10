@@ -8,12 +8,11 @@ function Card ({ project }) {
     return (
         <CardStyled>
             <div className="poster">
-                <img src={project.media[0]} alt="" />
+                {/* <img src={project.media[0]} alt="" /> */}
             </div>
             <div className="body">
-                <h3>{project.title}</h3>
-                {/* <p dangerouslySetInnerHTML={{ __html: project.description}} /> */}
-
+                <h2>{project.title}</h2>
+                <h4>{project.caption}</h4>
                 <Link href="/projects/[slug]" as={`/projects/${project.slug}`}>
                     <a>Click to read more...</a>
                 </Link>
@@ -24,21 +23,28 @@ function Card ({ project }) {
 
 const CardStyled = styled.div`
     background-color: #7fffd4;
-    padding: 30px;
-    height: 100%;
+    height: 250px;
     width: 100%;
-    border: 1px solid #cccccc;
-    border-radius: 25px;
-    overflow: hidden;
+    border: 3px #cccccc;
+    border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    overflow: hidden;
+    margin-bottom: 20px;
 
     .body {
 
-        p {
-            color: #666666;
+        padding: 20px;
+
+        h2 {
+            text-decoration: underline;
         }
+
         a {
-            display: inline-block;
             text-decoration: none;
             color: #000000;
         }

@@ -12,15 +12,13 @@ import SEO from '../next-seo.config';
 
 function MyApp({ Component, pageProps, navigation }) {
 
-    console.log(navigation);
-
     return (
         <>
             <DefaultSeo {...SEO} />
             <ThemeProvider theme={theme}>
                 <GlobalStyles />
                 <ContextWrapper navigation={navigation}>
-                    <Header isLight/>
+                    <Header />
                 </ContextWrapper>
                 <Component {...pageProps} />
             </ThemeProvider>

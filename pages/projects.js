@@ -5,18 +5,16 @@ import fetch from 'isomorphic-unfetch';
 
 function Projects({projects}) {
     return(
-        <ProjectsStyled>
-            <h1>My Projects</h1>
-            <Box>
-                <Flex className="projects-flex" flexDirection={{ _: 'column', 1: 'column', 2: 'row', 3: 'row' }}>
-                    {projects.map(project => (
-                        <Box key={project.id} width={{ _: '100%', 2: '50%' }}>
-                            <Card project={project}/>
-                        </Box>
-                    ))}
-                </Flex>
-            </Box>
-        </ProjectsStyled>
+        <Box variant="container">
+            <h1 style={{ textAlign: 'center'}}>My Projects</h1>
+            <Flex justifyContent="space-between" flexDirection={{ _: "column", 1: "row", 2: "row" }}>
+                {projects.map(project => (
+                    <Box key={project.id} width={{ _: "100%", 1: "30%" }}>
+                        <Card project={project} />
+                    </Box>
+                ))}
+            </Flex>
+        </Box>
     );
 }
 
@@ -32,16 +30,5 @@ export async function getServerSideProps() {
         }
     }
 }
-
-const ProjectsStyled = styled.div `
-    h1 {
-        text-align: center;
-    }
-    .projects-flex {
-        text-align: center;
-        grid-gap: 200px;
-        margin: 150px;
-    }
-`
 
 export default Projects;

@@ -34,47 +34,50 @@ function Navigation() {
 
 const NavigationStyled = styled.div`
 
-    @media(max-width: 768px) {
+    @media(max-width: 760px) {
         overflow: hidden;
 
         ul {
             display: flex;
             flex-direction: column;
-            gap: 1vh;
-            max-height: ${({ isOpen }) => (isOpen ? "300px" : "0")};
-            width: 100%;
+            flex-wrap: wrap;
+            max-height: ${({ isOpen }) => (isOpen ? "175px" : "0")};
             text-align: center;
-            
+            justify-content: center;
+            gap: 1vh;
+        }
+        li {
+            flex-basis: 50%;
         }
     }
 
     ul {
-        list-style: none;
         padding: 0;
         margin: 0;
+        list-style: none;
         display: flex;
+        flex-direction: row;
         justify-content: center;
+        gap: 6vw;
+    }
 
-        li {
-            margin-left: 50px;
-            font-family: 'Inter', sans-serif;
-            font-size: 1em;
-            font-weight: 400;
-            font-style: normal;
-            
+    li {
+        font-family: 'Lato', sans-serif;
+        font-size: 1.15em;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    a {
+        text-decoration: none;
+        color: ${props => props.color ? '#7fffd4' : ' #000000'};
+
+        &:hover {
+            text-decoration: underline;
         }
 
-        a {
-            text-decoration: none;
-            color: ${props => props.color ? '#7fffd4' : ' #000000'};
-
-            &:hover {
-                text-decoration: underline;
-            }
-
-            &.active {
-                text-decoration: underline;
-            }
+        &.active {
+            text-decoration: underline;
         }
     }
 `

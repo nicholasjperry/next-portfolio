@@ -2,9 +2,9 @@ import styled from '@emotion/styled';
 import { Box } from 'reflexbox';
 import Navigation from 'components/Navigation';
 
-function Header({ isLight }) {
+function Header() {
     return (
-        <HeaderStyled isLight={isLight}>
+        <HeaderStyled>
             <Box sx={{
                 margin: '0 auto',
                 width: '100%',
@@ -17,11 +17,12 @@ function Header({ isLight }) {
 }
 
 const HeaderStyled = styled.header`
-    background: ${props => props.isLight ? '#000000' : '#ffffff' };
+    background: ${props => props.color ? '#ffffff' : '#000000'};
     padding: 30px;
     position: sticky;
     top: 0;
     z-index: 1;
+    width: 100%;
 `
 
 export default Header;

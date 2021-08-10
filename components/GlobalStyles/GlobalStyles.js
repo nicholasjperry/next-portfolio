@@ -7,11 +7,18 @@ export default function GlobalStyles() {
     
                 body {
                     margin: 0;
+                    /* height: 100%; */
+                    /* overflow-x: hidden; */
                 }
     
                 h1 {
                     font-size: 3em;
                     margin: .67em 0;
+                    background-image: 
+                        linear-gradient(90deg, #552586, #B589D6);
+                    background-clip: text;
+                    color: transparent;
+                    font-weight: 900;
                 }
     
                 html {
