@@ -74,18 +74,22 @@ function ContactForm () {
                     <h1>Get In Touch</h1>
                     <p>SEND ME A MESSAGE!</p>
                 </Box>
-                <Flex flexWrap="wrap">
-                    <Box width={1} px={400}>
-                        <Input 
-                            id="message" 
-                            name="message" 
-                            type="text" 
-                            placeholder="Message" 
-                            value={values.message} 
-                            onChange={handleMessageChange}/>    
-                    </Box>
-                    <Flex width={1} px={400} sx={{ gridGap: '5px', marginTop: '10px' }}>
-                        <Box width={1/3}>
+                <Box sx={{
+                        maxWidth: 1200,
+                        mx: 'auto',
+                        px: 3
+                    }}>
+                    <Flex alignContent="center" justifyContent="space-between" flexDirection={{ _: "column", 1: "row", 2: "row" }} flexWrap="wrap">
+                        <Box width={{ _: "100%" }}>
+                            <Input 
+                                id="message" 
+                                name="message" 
+                                type="text" 
+                                placeholder="Message" 
+                                value={values.message} 
+                                onChange={handleMessageChange} />    
+                        </Box>
+                        <Box width={{ _: "100%", 1: "30%" }}>
                             <Input 
                                 id="email" 
                                 name="email" 
@@ -94,7 +98,7 @@ function ContactForm () {
                                 value={values.email}
                                 onChange={handleEmailChange} />
                         </Box>
-                        <Box width={1/3}>
+                        <Box width={{ _: "100%", 1: "30%" }}>
                             <Input 
                                 id="name" 
                                 name="fullName" 
@@ -103,11 +107,11 @@ function ContactForm () {
                                 value={values.fullName} 
                                 onChange={handleFullNameChange} />
                         </Box>
-                        <Box width={1/3} mb={30}>
+                        <Box width={{ _: "100%", 1: "30%" }} mb={30}>
                             <Button className="send-button" backgroundColor="black" onClick={logValues}>Send</Button>
                         </Box>
                     </Flex>
-                </Flex>
+                </Box>
             </ContactStyled>
         </>
     );
@@ -119,13 +123,17 @@ const ContactStyled = styled.div`
         margin-bottom: 40px;
     }
 
+    .form-container{
+        padding: 200px;
+    }
+
     #message {
         height: 150px;
         padding-bottom: 120px;
     }
 
     .send-button{
-        width: 290px;
+        width: 100%;
         padding: 10px;
         cursor: pointer;
     }

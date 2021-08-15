@@ -1,4 +1,3 @@
-import styled from '@emotion/styled';
 import { Flex, Box } from 'reflexbox';
 import Card from 'components/Card';
 import fetch from 'isomorphic-unfetch';
