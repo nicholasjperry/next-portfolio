@@ -57,6 +57,7 @@ function ContactForm () {
         })
         .then(response => response.json())
         .then(data => console.log(data))
+        .then(alert('Thank you for your message!'))
         .catch((error) => {
             console.log("Error: ", error);
         });
