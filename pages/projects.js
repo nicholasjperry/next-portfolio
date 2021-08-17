@@ -6,13 +6,19 @@ function Projects({projects}) {
     return(
         <Box variant="container">
             <h1 style={{ textAlign: 'center'}}>My Projects</h1>
-            <Flex justifyContent="space-between" flexDirection={{ _: "column", 1: "row", 2: "row" }}>
-                {projects.map(project => (
-                    <Box key={project.id} width={{ _: "100%", 1: "30%" }}>
-                        <Card project={project} />
-                    </Box>
-                ))}
-            </Flex>
+            <Box sx={{
+                maxWidth: '1200px',
+                mx: 'auto',
+                px: 3
+            }}>
+                <Flex justifyContent="space-between" flexDirection={{ _: "column", 1: "row", 2: "row" }}>
+                    {projects.map(project => (
+                        <Box key={project.id} width={{ _: "100%", 1: "30%" }}>
+                            <Card project={project} />
+                        </Box>
+                    ))}
+                </Flex>
+            </Box>
         </Box>
     );
 }

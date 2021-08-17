@@ -13,7 +13,8 @@ function ContactForm () {
         email: '',
         fullName: '',
     });
-    // const [submitted, setSubmitted] = useState(false);
+    const [submitted, setSubmitted] = useState(false);
+    const [valid, setValid] = useState(false);
 
     const handleMessageChange = (e) => {
         e.persist();
@@ -62,10 +63,15 @@ function ContactForm () {
             console.log("Error: ", error);
         });
     }
-    
-    // const handleSubmit = (e) => {
-    //     e.preventDefault();
-    // }
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if(values.message && values.email && values.fullName) {
+            setValid(true);
+            logValues();
+        }
+        setSubmitted(true);
+    }
 
     return (
 
@@ -73,14 +79,18 @@ function ContactForm () {
             <ContactStyled>
                 <Box className="heading">
                     <h1>Get In Touch</h1>
-                    <p>SEND ME A MESSAGE!</p>
+                    <h3>Send Me A Message</h3>
                 </Box>
                 <Box sx={{
                         maxWidth: 1200,
                         mx: 'auto',
-                        px: 3
-                    }}>
-                    <Flex alignContent="center" justifyContent="space-between" flexDirection={{ _: "column", 1: "row", 2: "row" }} flexWrap="wrap">
+                        px: 3,
+                        color: '#B589D6',
+                    }} 
+                        as="form" 
+                        onSubmit={handleSubmit}
+                        className="form-container">
+                    <Flex sx={{ gap: 3 }}justifyContent="space-between" flexDirection={{ _: "column", 1: "row", 2: "row" }} flexWrap="wrap">
                         <Box width={{ _: "100%" }}>
                             <Input 
                                 id="message" 
@@ -88,7 +98,8 @@ function ContactForm () {
                                 type="text" 
                                 placeholder="Message" 
                                 value={values.message} 
-                                onChange={handleMessageChange} />    
+                                onChange={handleMessageChange} />
+                                {submitted && !values.message && <span id="message-error">Please enter a message</span>}    
                         </Box>
                         <Box width={{ _: "100%", 1: "30%" }}>
                             <Input 
@@ -98,6 +109,7 @@ function ContactForm () {
                                 placeholder="Email" 
                                 value={values.email}
                                 onChange={handleEmailChange} />
+                                {submitted && !values.email && <span id="email-address-error">Please enter a valid email address</span>}
                         </Box>
                         <Box width={{ _: "100%", 1: "30%" }}>
                             <Input 
@@ -107,9 +119,10 @@ function ContactForm () {
                                 placeholder="Full Name" 
                                 value={values.fullName} 
                                 onChange={handleFullNameChange} />
+                                {submitted && !values.fullName && <span id="fullname-error">Please enter your full name</span>}
                         </Box>
-                        <Box width={{ _: "100%", 1: "30%" }} mb={30}>
-                            <Button className="send-button" backgroundColor="black" onClick={logValues}>Send</Button>
+                        <Box width={{ _: "100%", 1: "30%" }}>
+                            <Button className="send-button">Send</Button>
                         </Box>
                     </Flex>
                 </Box>
@@ -124,19 +137,38 @@ const ContactStyled = styled.div`
         margin-bottom: 40px;
     }
 
-    .form-container{
-        padding: 200px;
+    h3 {
+        font-style: italic;
     }
 
     #message {
         height: 150px;
         padding-bottom: 120px;
+        border: 1px;
+        box-shadow: 0 0 10px rgba(0,0,0, 0.2);
+    }
+    
+    #email {
+        padding-bottom: 10px;
+        border: 1px;
+        box-shadow: 0 0 10px rgba(0,0,0, 0.2);
+    }
+    
+    #name {
+        padding-bottom: 10px;
+        border: 1px;
+        box-shadow: 0 0 10px rgba(0,0,0, 0.2);
     }
 
     .send-button{
         width: 100%;
         padding: 10px;
+        padding-bottom: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0, 0.2);
         cursor: pointer;
+        background-color: #7fffd4;
+        color: black;
+        border-radius: 10px;
     }
 `
 

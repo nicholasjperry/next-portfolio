@@ -7,9 +7,9 @@ function Card ({ project }) {
 
     return (
         <CardStyled>
-            <div className="poster">
-                {/* <img src={project.media[0]} alt="" /> */}
-            </div>
+            {/* <div className="poster">
+                <img src={project.media[0]} alt="" />
+            </div> */}
             <div className="body">
                 <h2>{project.title}</h2>
                 <h4>{project.caption}</h4>
@@ -23,7 +23,7 @@ function Card ({ project }) {
 
 const CardStyled = styled.div`
     background-color: #7fffd4;
-    height: 250px;
+    height: 300px;
     width: 100%;
     border: 3px #cccccc;
     border-radius: 10px;
