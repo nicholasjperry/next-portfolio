@@ -6,7 +6,7 @@ const Home = () => {
         <>
             <HomeStyled>
                 <Box className='welcome-text'>
-                    <h1>Welcome to my Portfolio Website!</h1>
+                    <h1>Welcome To My Portfolio Website!</h1>
                     <p>Browse my projects, read about my background, and feel free to contact me!</p>
                 </Box>
             </HomeStyled>

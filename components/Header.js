@@ -5,11 +5,7 @@ import Navigation from 'components/Navigation';
 function Header() {
     return (
         <HeaderStyled>
-            <Box sx={{
-                margin: '0 auto',
-                width: '100%',
-                padding: 30
-            }}>
+            <Box>
                 <Navigation />
             </Box>
         </HeaderStyled>
@@ -18,11 +14,12 @@ function Header() {
 
 const HeaderStyled = styled.header`
     background: ${props => props.color ? '#ffffff' : '#000000'};
-    padding: 30px;
+    padding: 60px;
     position: sticky;
     top: 0;
     z-index: 1;
     width: 100%;
+    margin: "0 auto";
 `
 
 export default Header;

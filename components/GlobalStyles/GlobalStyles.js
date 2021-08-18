@@ -6,9 +6,9 @@ export default function GlobalStyles() {
             <Global styles={css`
     
                 body {
-                    margin: 0;
+                    margin: 0 auto;
+                    overflow-x: hidden;
                     /* height: 100%; */
-                    /* overflow-x: hidden; */
                 }
     
                 h1 {
