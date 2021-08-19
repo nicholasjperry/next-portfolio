@@ -7,7 +7,7 @@ const Home = () => {
             <HomeStyled>
                 <Box className='welcome-text'>
                     <h1>Welcome To My Portfolio Website!</h1>
-                    <p>Browse my projects, read about my background, and feel free to contact me!</p>
+                    <h4>Browse my projects, read about my background, and feel free to contact me</h4>
                 </Box>
             </HomeStyled>
         </>
@@ -20,9 +20,8 @@ const HomeStyled = styled.div`
         margin-top: 17%;
         font-size: 1.25rem;
     }
-    p {
+    h4 {
         text-align: center;
-        color: #dedede;
     }
 `
 

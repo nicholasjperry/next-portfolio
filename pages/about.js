@@ -6,19 +6,24 @@ function About() {
     return(
         <>
             <AboutStyled>
-                <Box className="about-container">
-                    <h1>About Me</h1>
-                    <Image src="https://res.cloudinary.com/ddbycjzyd/image/upload/v1623431089/20201215_153018_bqobn3.jpg" alt="" width={600} height={500} />
-                </Box>
+                <h1>About Me</h1>
+                <Image 
+                    src="https://res.cloudinary.com/ddbycjzyd/image/upload/v1623431089/20201215_153018_bqobn3.jpg" alt="" 
+                    width={600} 
+                    height={500} 
+                    className="image"
+                />
             </AboutStyled>
         </>
     );
 }
 
 const AboutStyled = styled.div `
-    .about-container {
-        text-align: center;
-        top: 0;
+    text-align: center;
+    top: 0;
+
+    .image {
+        box-shadow: 0 0 10px rgba(0,0,0, 0.2);
     }
 `
 

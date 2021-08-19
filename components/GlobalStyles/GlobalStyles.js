@@ -8,7 +8,6 @@ export default function GlobalStyles() {
                 body {
                     margin: 0 auto;
                     overflow-x: hidden;
-                    /* height: 100%; */
                 }
     
                 h1 {
