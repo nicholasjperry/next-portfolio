@@ -62,7 +62,7 @@ const NavigationStyled = styled.div`
     }
 
     li {
-        font-family: 'Lato', sans-serif;
+        font-family: 'Nova Mono', monospace;
         font-size: 1.15em;
         font-weight: 400;
         font-style: normal;
@@ -88,7 +88,6 @@ const NavigationStyled = styled.div`
             background-image:
                 linear-gradient(90deg, #d47fff, #7fffd4);
             background-size: 100% 3px;
-            /* text-decoration: underline; */
         }
     }
 `
