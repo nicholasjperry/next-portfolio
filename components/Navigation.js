@@ -69,15 +69,26 @@ const NavigationStyled = styled.div`
     }
 
     a {
+        background-image:
+            linear-gradient(90deg, #d47fff, #7fffd4);
+        background-size: 0% 3px;
+        background-repeat: no-repeat;
+        background-position: left bottom;
+        transition: background-size 350ms ease;
+
+        /* extra styling */
         text-decoration: none;
         color: ${props => props.color ? '#7fffd4' : ' #000000'};
 
         &:hover {
-            text-decoration: underline;
+            background-size: 100% 3px;
         }
 
         &.active {
-            text-decoration: underline;
+            background-image:
+                linear-gradient(90deg, #d47fff, #7fffd4);
+            background-size: 100% 3px;
+            /* text-decoration: underline; */
         }
     }
 `

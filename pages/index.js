@@ -18,7 +18,7 @@ const HomeStyled = styled.div`
     .welcome-text {
         text-align: center;
         margin-top: 17%;
-        font-size: 1.25rem;
+        font-size: 1.4em;
     }
     h4 {
         text-align: center;

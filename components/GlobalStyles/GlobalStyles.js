@@ -11,18 +11,18 @@ export default function GlobalStyles() {
                 }
     
                 h1 {
-                    font-size: 3em;
-                    margin: .67em 0;
+                    font-size: 4em;
+                    margin: .4em 0;
                     background-image: 
                         linear-gradient(90deg, #552586, #B589D6);
                     background-clip: text;
                     color: transparent;
-                    font-weight: 900;
+                    font-weight: 800;
+                    font-family: 'Aladin';
                 }
     
                 html {
                     box-sizing: border-box; 
-                    font-family: sans-serif;
                 }
     
                 *,

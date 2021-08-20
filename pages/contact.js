@@ -137,10 +137,6 @@ const ContactStyled = styled.div`
         margin-bottom: 40px;
     }
 
-    h3 {
-        font-style: italic;
-    }
-
     #message {
         height: 150px;
         padding-bottom: 120px;

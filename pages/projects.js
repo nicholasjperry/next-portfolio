@@ -6,7 +6,7 @@ function Projects({projects}) {
     return(
         <Box variant="container">
             <h1 style={{ textAlign: "center" }}>Projects</h1>
-            <h3 style={{ textAlign: "center", fontStyle: "italic" }}>A List of My Projects</h3>
+            <h3 style={{ textAlign: "center" }}>A List of My Projects</h3>
             <Box sx={{
                 maxWidth: "1200px",
                 mx: "auto",
