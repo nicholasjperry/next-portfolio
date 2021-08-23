@@ -10,13 +10,13 @@ breakpoints.xxl = breakpoints[4]
 
 export default {
     
-    variants: {
-        container: {
-            mx: 'auto',
-            maxWidth: 1200,
-            width: '100%',
-            px: 30,
-        }
-    },
+    // variants: {
+    //     container: {
+    //         mx: 'auto',
+    //         maxWidth: 1200,
+    //         width: '100%',
+    //         px: 30,
+    //     }
+    // },
     breakpoints
 }

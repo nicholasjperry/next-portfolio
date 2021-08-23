@@ -41,7 +41,7 @@ const NavigationStyled = styled.div`
             display: flex;
             flex-direction: column;
             flex-wrap: wrap;
-            max-height: ${({ isOpen }) => (isOpen ? "175px" : "0")};
+            max-height: ${({ isOpen }) => (isOpen ? "300px" : "0")};
             text-align: center;
             justify-content: center;
             gap: 1vh;
@@ -69,6 +69,7 @@ const NavigationStyled = styled.div`
     }
 
     a {
+        /* styling for active nav link */
         background-image:
             linear-gradient(90deg, #d47fff, #7fffd4);
         background-size: 0% 3px;
@@ -91,7 +92,6 @@ const NavigationStyled = styled.div`
         }
     }
 `
-
 const Hamburger = styled.div`
     display: none;
 

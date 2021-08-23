@@ -7,19 +7,18 @@ export default function GlobalStyles() {
     
                 body {
                     margin: 0 auto;
+                    padding: 0;
                     overflow-x: hidden;
                     font-family: 'Nova Mono', monospace;
                 }
     
                 h1 {
-                    font-size: 3em;
-                    margin: .5em 0;
+                    font-size: 4rem;
                     background-image: 
                         linear-gradient(90deg, #552586, #B589D6);
                     background-clip: text;
                     color: transparent;
-                    font-weight: 800;
-                    /* font-family: 'Nova Mono', monospace; */
+                    margin-top: 0;
                 }
     
                 html {

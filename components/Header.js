@@ -16,7 +16,6 @@ const HeaderStyled = styled.header`
     background: ${props => props.color ? "#ffffff" : "#000000"};
     padding: 60px;
     position: sticky;
-    margin: "0 auto";
 `
 
 export default Header;
