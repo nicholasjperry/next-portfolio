@@ -85,7 +85,6 @@ function ContactForm () {
                         maxWidth: 1200,
                         mx: 'auto',
                         px: 3,
-                        color: '#B589D6',
                     }} 
                         as="form" 
                         onSubmit={handleSubmit}
@@ -141,19 +140,22 @@ const ContactStyled = styled.div`
         height: 150px;
         padding-bottom: 120px;
         border: 1px;
-        box-shadow: 0 0 10px rgba(0,0,0, 0.2);
+        box-shadow: 0 0 10px rgba(0,0,0, 0.5);
+        background-color: #fff;
     }
     
     #email {
         padding-bottom: 10px;
         border: 1px;
-        box-shadow: 0 0 10px rgba(0,0,0, 0.2);
+        box-shadow: 0 0 10px rgba(0,0,0, 0.5);
+        background-color: #fff;
     }
     
     #name {
         padding-bottom: 10px;
         border: 1px;
-        box-shadow: 0 0 10px rgba(0,0,0, 0.2);
+        box-shadow: 0 0 10px rgba(0,0,0, 0.5);
+        background-color: #fff;
     }
 
     .send-button{

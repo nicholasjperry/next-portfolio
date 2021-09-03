@@ -4,12 +4,19 @@ export default function GlobalStyles() {
     return (    
         <>
             <Global styles={css`
+
+                html {
+                    box-sizing: border-box; 
+                }
     
                 body {
                     margin: 0 auto;
                     padding: 0;
+                    width: 100%;
                     overflow-x: hidden;
                     font-family: 'Nova Mono', monospace;
+                    background-color: #36454f;
+
                 }
     
                 h1 {
@@ -20,9 +27,9 @@ export default function GlobalStyles() {
                     color: transparent;
                     margin-top: 0;
                 }
-    
-                html {
-                    box-sizing: border-box; 
+
+                h3 {
+                    color: white;
                 }
     
                 *,

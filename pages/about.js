@@ -7,21 +7,30 @@ function About() {
         <>
             <AboutStyled>
                 <h1>About Me</h1>
-                <Image 
-                    src="https://res.cloudinary.com/ddbycjzyd/image/upload/v1623431089/20201215_153018_bqobn3.jpg" alt="" 
-                    width={600} 
-                    height={500} 
-                    className="image"
-                />
+                <Box className="image-container">
+                    <Image 
+                        src="https://res.cloudinary.com/ddbycjzyd/image/upload/v1623431089/20201215_153018_bqobn3.jpg" alt="" 
+                        width={600} 
+                        height={500} 
+                    />
+                </Box>
             </AboutStyled>
         </>
     );
 }
 
 const AboutStyled = styled.div `
-    text-align: center;
-    top: 0;
 
+    h1 {
+        text-align: center;
+    }
+
+    .image-container {
+        padding: 0;
+        margin: 0 auto;
+        max-width: 600px;
+    }
+    
     .image {
         box-shadow: 0 0 10px rgba(0,0,0, 0.2);
     }

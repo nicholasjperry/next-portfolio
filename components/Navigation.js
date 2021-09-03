@@ -41,10 +41,9 @@ const NavigationStyled = styled.div`
             display: flex;
             flex-direction: column;
             flex-wrap: wrap;
-            max-height: ${({ isOpen }) => (isOpen ? "300px" : "0")};
+            max-height: ${({ isOpen }) => (isOpen ? "300" : "0")};
             text-align: center;
             justify-content: center;
-            gap: 1vh;
         }
         li {
             flex-basis: 50%;
@@ -53,12 +52,14 @@ const NavigationStyled = styled.div`
 
     ul {
         padding: 0;
-        margin: 0;
+        margin: 0 auto;
         list-style: none;
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: center; 
         gap: 6vw;
+        text-align: center;
+        width: 100%;
     }
 
     li {
@@ -79,7 +80,7 @@ const NavigationStyled = styled.div`
 
         /* extra styling */
         text-decoration: none;
-        color: ${props => props.color ? '#7fffd4' : ' #000000'};
+        color: #7fffd4;
 
         &:hover {
             background-size: 100% 3px;

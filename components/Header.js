@@ -13,9 +13,10 @@ function Header() {
 }
 
 const HeaderStyled = styled.header`
-    background: ${props => props.color ? "#ffffff" : "#000000"};
+    background: #000000;
     padding: 60px;
     position: sticky;
+    width: 100%;
 `
 
 export default Header;
