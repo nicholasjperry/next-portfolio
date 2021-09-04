@@ -7,16 +7,22 @@ export default function GlobalStyles() {
 
                 html {
                     box-sizing: border-box; 
+                    position: fixed;
+                    overflow: auto;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background: #36454f;
                 }
     
                 body {
+                    height: 100%;
+                    overflow: auto;
                     margin: 0 auto;
                     padding: 0;
-                    width: 100%;
-                    overflow-x: hidden;
+                    width: 100vw;
                     font-family: 'Nova Mono', monospace;
-                    background-color: #36454f;
-
                 }
     
                 h1 {
@@ -25,7 +31,7 @@ export default function GlobalStyles() {
                         linear-gradient(90deg, #552586, #B589D6);
                     background-clip: text;
                     color: transparent;
-                    margin-top: 0;
+                    /* margin-top: 0; */
                 }
 
                 h3 {

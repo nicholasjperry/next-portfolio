@@ -9,5 +9,9 @@ breakpoints.xl = breakpoints[3]
 breakpoints.xxl = breakpoints[4]
 
 export default {
-    breakpoints
+    breakpoints,
+
+    variants: {
+        
+    }
 }
