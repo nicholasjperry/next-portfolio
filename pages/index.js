@@ -1,25 +1,5 @@
 import styled from '@emotion/styled';
 import { Box } from 'reflexbox';
-import { useState, useEffect, useRef } from 'react';
-
-// function TypeWriter ({ text }) {
-
-//     const index = useRef(0);
-
-//     const [currentText, setCurrentText] = useState("");
-
-//     useEffect(() => {
-//         const timeoutId = setTimeout(() => {
-//             setCurrentText((value) => value + text.charAt(index.current));
-//             index.current += 1;
-//         }, 75);
-//     return () => {
-//         clearTimeout(timeoutId);
-//     };
-// }, [currentText, text]);
-
-//     return <div>{currentText}</div>
-// };
 
 const Home = () => {
     return (
