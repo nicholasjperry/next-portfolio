@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { Box } from 'reflexbox';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useState, useContext } from 'react';
@@ -13,6 +14,9 @@ function Navigation() {
     return(
         <>
             <NavigationStyled color={color} isOpen={isOpen}>
+                <Box className="nav">
+                    <Link href="/"><a>NP</a></Link>
+                </Box>
                 <ul>
                     {menuItems.map(item => (
                         <li key={item.id}>
@@ -41,12 +45,37 @@ const NavigationStyled = styled.div`
             display: flex;
             flex-direction: column;
             flex-wrap: wrap;
-            max-height: ${({ isOpen }) => (isOpen ? "300" : "0")};
+            max-height: ${({ isOpen }) => (isOpen ? "300px" : "0")};
             text-align: center;
             justify-content: center;
         }
         li {
             flex-basis: 50%;
+        }
+    }
+
+    .nav {
+        display: inline-block;
+        transform: translate(0%, 70%);
+        background-image: linear-gradient(to left, #d47fff, #552586);
+
+        a {
+            font-size: 30px;
+            width: 40px;
+            height: 35px;
+            border: 5px solid;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+            &:hover {
+                background-size: 0%;
+            }
+
+            @media(max-width: 768px) {
+                display: none;
+            }
         }
     }
 
