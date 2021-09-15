@@ -16,7 +16,7 @@ function About() {
                         />
                     </Box>
                     <Box className="paragraph-container">
-                        <p>
+                        <p m={10}>
                             For starters, I have lived in Nashville for almost all of my life, and I currently work as a registered nurse in the area. 
                             It is a great place to live, find work in healthcare or tech among so many other fields, raise a family, and of course listen to great music. 
                             (I happen to not be a fan of modern-day country music at all, but the music scene here is so vast, it doesn’t even matter!)
@@ -46,6 +46,7 @@ const AboutStyled = styled.div `
 
     .image-container {
         max-width: 600px;  
+        max-height: 500px;
         padding: 0;
         margin: 1em;
         flex-shrink: 0;
@@ -54,8 +55,12 @@ const AboutStyled = styled.div `
     
     .paragraph-container {
         max-width: 600px;
-        padding: 0;
         margin: 1em;
+        border-image-source: linear-gradient(to left, #d47fff, #7fffd4);
+        border-width: 5px;
+        border-image-slice: 1;
+        padding: 1rem;
+        box-shadow: 0 0 20px rgba(0,0,0, 0.1);
     }
 
     p {
