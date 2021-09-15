@@ -11,7 +11,7 @@ function Card ({ project }) {
                 <img src={project.media[0]} alt="" />
             </div> */}
             <div className="body">
-                <h2>{project.title}</h2>
+                <h3>{project.title}</h3>
                 <h4>{project.caption}</h4>
                 <Link href="/projects/[slug]" as={`/projects/${project.slug}`}>
                     <a>Click to read more...</a>
@@ -40,7 +40,7 @@ const CardStyled = styled.div`
 
         padding: 20px;
 
-        h2 {
+        h3 {
             text-decoration: underline;
         }
 

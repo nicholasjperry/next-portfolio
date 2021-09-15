@@ -79,7 +79,7 @@ function ContactForm () {
             <ContactStyled>
                 <Box className="heading">
                     <h1>Get In Touch</h1>
-                    <h3>Send Me A Message</h3>
+                    <h2>Send Me A Message</h2>
                 </Box>
                 <Box sx={{
                         maxWidth: 1200,

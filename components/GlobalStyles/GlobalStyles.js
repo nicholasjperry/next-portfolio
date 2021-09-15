@@ -32,10 +32,9 @@ export default function GlobalStyles() {
                         linear-gradient(90deg, #552586, #B589D6);
                     background-clip: text;
                     color: transparent;
-                    /* margin-top: 0; */
                 }
 
-                h3 {
+                h2 {
                     color: white;
                 }
     

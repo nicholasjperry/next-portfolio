@@ -21,9 +21,9 @@ function Project({ project }) {
         <>
             <NextSeo {...SEO} />
             <Box variant="container">
-                <Box as="h2" my={40}>{project.title}</Box>
+                <Box as="h2" style={{ margin: "1em" }} my={40}>{project.title}</Box>
                 <Box maxWidth={600}>
-                    <p dangerouslySetInnerHTML={{ __html: project.description }}></p>
+                    <p style={{ color: "white", margin: "1em" }} dangerouslySetInnerHTML={{ __html: project.description }}></p>
                 </Box>
             </Box>
         </>

@@ -61,8 +61,6 @@ const HomeStyled = styled.div`
 
     .text-section h3 {
         font-size: 4rem;
-        /* background-clip: text;
-        color: transparent; */
         text-align: center;
     }
 

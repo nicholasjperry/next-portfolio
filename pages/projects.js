@@ -4,9 +4,9 @@ import fetch from 'isomorphic-unfetch';
 
 function Projects({projects}) {
     return(
-        <Box variant="container">
+        <Box>
             <h1 style={{ textAlign: "center" }}>Projects</h1>
-            <h3 style={{ textAlign: "center" }}>A List of My Projects</h3>
+            <h2 style={{ textAlign: "center" }}>A List of My Projects</h2>
             <Box sx={{
                 maxWidth: "1200px",
                 mx: "auto",
@@ -14,7 +14,7 @@ function Projects({projects}) {
                 mt: "50px",
                 alignContent: "center"
             }}>
-                <Flex justifyContent="space-between" flexDirection={{ _: "column", 1: "row", 2: "row" }}>
+                <Flex justifyContent="space-between" flexDirection={{ _: "column", 1: "column", 2: "row" }}>
                     {projects.map(project => (
                         <Box key={project.id} width={{ _: "100%", 1: "30%" }}>
                             <Card project={project} />
