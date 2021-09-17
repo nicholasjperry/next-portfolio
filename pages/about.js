@@ -61,12 +61,8 @@ const AboutStyled = styled.div `
         border-image-slice: 1;
         padding: 1rem;
         box-shadow: 0 0 20px rgba(0,0,0, 0.1);
+        background-image: linear-gradient(to right, #d47fff, #ffd47f);
     }
-
-    p {
-        color: white;
-    }
-
 `
 
 export default About;

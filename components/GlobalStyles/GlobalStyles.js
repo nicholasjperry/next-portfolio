@@ -13,7 +13,6 @@ export default function GlobalStyles() {
                     left: 0;
                     right: 0;
                     bottom: 0;
-                    background: #36454f;
                 }
     
                 body {
@@ -24,6 +23,7 @@ export default function GlobalStyles() {
                     margin: 0 auto;
                     padding: 0;
                     font-family: 'Nova Mono', monospace;
+                    background: radial-gradient(circle at top, #36454f, black 100%);
                 }
     
                 h1 {
