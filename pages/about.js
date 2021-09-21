@@ -7,7 +7,7 @@ function About() {
         <>
             <AboutStyled>
                 <h1>About Me</h1>
-                <Flex justifyContent="space-evenly" flexDirection={{ _: "column", 1: "column", 2: "row" }}>
+                <Flex flexWrap="wrap" justifyContent="space-evenly" flexDirection={{ _: "column", 1: "column", 2: "row" }}>
                     <Box className="image-container">
                         <Image 
                             src="https://res.cloudinary.com/ddbycjzyd/image/upload/v1623431089/20201215_153018_bqobn3.jpg" alt="" 
@@ -16,7 +16,7 @@ function About() {
                         />
                     </Box>
                     <Box className="paragraph-container">
-                        <p m={10}>
+                        <p>
                                 For starters, I have lived in Nashville for almost all of my life, and I currently work as a registered nurse in the area. 
                             It is a great place to live, find work in healthcare or tech among so many other fields, raise a family, and of course listen to great music. 
                             (I happen to not be a fan of modern-day country music at all, but the music scene here is so vast, it doesn’t even matter!)
@@ -30,6 +30,12 @@ function About() {
                             At this point, I am self-actualized and I can say with extreme confidence that pursuing computer programming is just one of my many paths in life.
                         </p>
                     </Box>
+                    {/* <Box className="image-container">
+                        <Image src="https://res.cloudinary.com/ddbycjzyd/image/upload/v1632189261/20210908_105613_cigclw.jpg" alt=""
+                            width={600}
+                            height={600}
+                        />
+                    </Box> */}
                 </Flex>
             </AboutStyled>
         </>

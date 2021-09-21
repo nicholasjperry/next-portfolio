@@ -1,10 +1,11 @@
+import styled from '@emotion/styled';
 import { Flex, Box } from 'reflexbox';
 import Card from 'components/Card';
 import fetch from 'isomorphic-unfetch';
 
 function Projects({projects}) {
     return(
-        <Box>
+        <ProjectsStyled>
             <h1 style={{ textAlign: "center" }}>Projects</h1>
             <h2 style={{ textAlign: "center" }}>A List of My Projects</h2>
             <Box sx={{
@@ -16,13 +17,13 @@ function Projects({projects}) {
             }}>
                 <Flex justifyContent="space-between" flexDirection={{ _: "column", 1: "column", 2: "row" }}>
                     {projects.map(project => (
-                        <Box key={project.id} width={{ _: "100%", 1: "30%" }}>
+                        <Box key={project.id} width={{ _: "100%", 1: "100%", 2: "30%" }} className="card-container">
                             <Card project={project} />
                         </Box>
                     ))}
                 </Flex>
             </Box>
-        </Box>
+        </ProjectsStyled>
     );
 }
 
@@ -38,5 +39,15 @@ export async function getServerSideProps() {
         }
     }
 }
+
+const ProjectsStyled = styled.div `
+
+    .card-container {
+        @media only screen and (min-width: 768px) and (max-width: 1024px){
+            width: 600px;
+            margin: 0 auto;
+        }
+    }
+`
 
 export default Projects;
