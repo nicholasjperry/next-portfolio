@@ -17,9 +17,6 @@ function About() {
                     </Box>
                     <Box className="paragraph-container">
                         <p>
-                                For starters, I have lived in Nashville for almost all of my life, and I currently work as a registered nurse in the area. 
-                            It is a great place to live, find work in healthcare or tech among so many other fields, raise a family, and of course listen to great music. 
-                            (I happen to not be a fan of modern-day country music at all, but the music scene here is so vast, it doesn’t even matter!)
                             I have worked in healthcare for what sums up to approximately 6 years, and I have worked as a registered nurse for the past 4 years. 
                             As rewarding as it is in being an RN, I have been feeling a consistent stress and angst, insofar as I am ready to be utilized and challenged in different ways. 
                             And what I mean by that more specifically is that I have been experiencing feelings of wanting to perform somewhat of a career conversion to computer programming.
