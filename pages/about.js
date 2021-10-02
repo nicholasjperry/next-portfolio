@@ -60,6 +60,7 @@ const AboutStyled = styled.div `
     .paragraph-container {
         text-indent: 5%;
         max-width: 600px;
+        height: 100%;
         margin: 1em;
         border-image-source: linear-gradient(to left, #d47fff, #7fffd4);
         border-width: 5px;
