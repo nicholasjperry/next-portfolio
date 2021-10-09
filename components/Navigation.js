@@ -37,10 +37,8 @@ function Navigation() {
 }
 
 const NavigationStyled = styled.div`
-
     @media(max-width: 768px) {
         overflow: hidden;
-
         ul {
             display: flex;
             flex-direction: column;
@@ -53,12 +51,10 @@ const NavigationStyled = styled.div`
             flex-basis: 50%;
         }
     }
-
     .nav {
         display: inline-block;
         transform: translate(0%, 70%);
         background-image: linear-gradient(to left, #d47fff, #552586);
-
         a {
             font-size: 30px;
             width: 40px;
@@ -68,17 +64,14 @@ const NavigationStyled = styled.div`
             align-items: center;
             justify-content: center;
             text-align: center;
-
             &:hover {
                 background-size: 0%;
             }
-
             @media(max-width: 768px) {
                 display: none;
             }
         }
     }
-
     ul {
         padding: 0;
         margin: 0 auto;
@@ -90,14 +83,12 @@ const NavigationStyled = styled.div`
         text-align: center;
         width: 100%;
     }
-
     li {
         font-family: 'Nova Mono', monospace;
         font-size: 1.15em;
         font-weight: 400;
         font-style: normal;
     }
-
     a {
         /* styling for active nav link */
         background-image:
@@ -106,15 +97,12 @@ const NavigationStyled = styled.div`
         background-repeat: no-repeat;
         background-position: left bottom;
         transition: background-size 350ms ease;
-
         /* extra styling */
         text-decoration: none;
         color: #7fffd4;
-
         &:hover {
             background-size: 100% 3px;
         }
-
         &.active {
             background-image:
                 linear-gradient(90deg, #d47fff, #7fffd4);
@@ -124,12 +112,10 @@ const NavigationStyled = styled.div`
 `
 const Hamburger = styled.div`
     display: none;
-
     @media(max-width: 768px) {
         display: flex;
         flex-direction: column;
         cursor: pointer;
-
         span {
             height: 2px;
             width: 25px;
@@ -138,7 +124,6 @@ const Hamburger = styled.div`
             border-radius: 5px;
         }
     }
-
 `
 
 export default Navigation;

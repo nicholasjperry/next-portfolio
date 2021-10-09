@@ -20,7 +20,7 @@ export default function GlobalStyles() {
                     height: 100%;
                     overflow: auto;
                     overflow-x: hidden;
-                    margin: 0 auto;
+                    margin: 0;
                     padding: 0;
                     font-family: 'Nova Mono', monospace;
                     background: radial-gradient(circle at top, #36454f, black 100%);

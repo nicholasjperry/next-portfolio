@@ -17,13 +17,13 @@
     "@emotion/styled": "^11.0.0",
     "@rebass/forms": "^4.0.6",
     "dotenv": "^8.2.0",
-    "framer-motion": "^4.1.17",
     "isomorphic-unfetch": "^3.1.0",
     "next": "^10.2.0",
     "next-seo": "^4.18.0",
     "polished": "^4.0.5",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-wavify": "^1.5.4",
     "rebass": "^4.0.7",
     "reflexbox": "^4.0.6"
   }
