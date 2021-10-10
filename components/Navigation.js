@@ -147,13 +147,15 @@ const NavigationStyled = styled.div`
             margin: 0 auto;
             padding: 0;
             font-size: 40px;
-            display: flex;
-            flex-direction: row;
-            justify-content: right;
-            align-content: center;
+            display: block;
+            float: right;
             list-style: none;
-            gap: 1vw;
-            transform: translate(-2%, -70%);
+            transform: translate(-30%, -70%);
+        }
+
+        li {
+            display: inline;
+            margin-left: 2vw;
         }
 
         a {
