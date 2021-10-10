@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import { Box } from 'reflexbox';
-import Wave from 'react-wavify'
+import Wave from 'react-wavify';
 
 const Home = () => {
 
@@ -8,12 +8,9 @@ const Home = () => {
         <>
             <HomeStyled>
                 <Box className="wave-container">
-                    <h3>
-                        Nick Perry - Software Developer
-                    </h3>
-                    <h4>
-                        /*Browse my projects, read about my background, and feel free to contact me*/
-                    </h4>
+                    <h1>Hi, I'm Nick Perry!</h1>
+                    <h2> -Software Developer- </h2>
+                    <h3>/*Browse my projects, read about my background, and feel free to contact me*/</h3>
                     <Wave className="wave" fill="url(#gradient)" options={{ amplitude: 20, speed: 0.25, points: 4 }}>
                         <defs>
                             <linearGradient id="gradient" gradientTransform="rotate(90deg)">
@@ -30,21 +27,28 @@ const Home = () => {
 
 const HomeStyled = styled.div`
 
-    /* background-image: 
-        linear-gradient(90deg, #552586, #B589D6); */
+    margin: 0;
+    padding: 0;
 
     .wave-container {
-        text-align: center;
-        color: #7fffd4;
         width: 100%;
-        margin-top: 20vh;
+        margin-top: 14vh;
 
-        @media(max-width: 768px) {
-            height: 450px;
+        h1 {
+            text-align: center;
+            color: #7fffd4;
+        }
+
+        h2 {
+            text-align: center;
+            color: #7fffd4;
+            font-size: 3rem;
         }
 
         h3 {
-            font-size: 4rem;
+            text-align: center;
+            color: #fff;
+            margin-bottom: 4vh;
         }
     }
 

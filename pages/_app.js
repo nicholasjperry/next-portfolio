@@ -6,6 +6,9 @@ import getConfig from 'next/config';
 import fetch from 'isomorphic-unfetch';
 import { DefaultSeo } from 'next-seo';
 import ContextWrapper from 'components/ContextWrapper';
+// import '@fortawesome/fontawesome-svg-core/styles.css';
+// import { config as fontawesomeConfig } from '@fortawesome/fontawesome-svg-core';
+// fontawesomeConfig.autoAddCss = false;
 
 import SEO from '../next-seo.config';
 

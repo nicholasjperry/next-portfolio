@@ -62,13 +62,12 @@ const AboutStyled = styled.div `
         max-width: 600px;
         height: 100%;
         margin: 1em;
-        border-image-source: linear-gradient(to left, #d47fff, #7fffd4);
+        /* border-image-source: linear-gradient(to left, #d47fff, #7fffd4);
         border-width: 5px;
-        border-image-slice: 1;
+        border-image-slice: 1; */
         padding: 1rem;
-        box-shadow: 0 0 20px rgba(0,0,0, 0.1);
+        /* box-shadow: 0 0 20px rgba(0,0,0, 0.1); */
         color: #fff;
-        /* background-image: linear-gradient(to right, #d47fff, #ffd47f); */
     }
 `
 

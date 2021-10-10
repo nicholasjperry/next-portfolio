@@ -14,7 +14,8 @@ function Header() {
 
 const HeaderStyled = styled.header`
     background: #000000;
-    padding: 60px;
+    margin: 0;
+    height: 125px;
     position: sticky;
     width: 100%;
 `
