@@ -33,13 +33,13 @@ function Navigation() {
                 <Box className="socials-container">
                     <ul>
                         <li>
-                            <a>
-                                <FontAwesomeIcon icon={faGithub} />
+                            <a href="https://www.github.com/nicholasjperry">
+                                <FontAwesomeIcon className="icon" icon={faGithub} />
                             </a>
                         </li>
                         <li>
-                            <a>
-                                <FontAwesomeIcon icon={faLinkedin} />
+                            <a href="https://www.linkedin.com/in/nicholas-j-perry">
+                                <FontAwesomeIcon className="icon" icon={faLinkedin} />
                             </a>
                         </li>
                     </ul>
@@ -160,6 +160,9 @@ const NavigationStyled = styled.div`
 
         a {
             color: #fff;
+            &:hover {
+                opacity: 0.5;
+            }
         }
     }
 `

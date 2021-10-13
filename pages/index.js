@@ -1,6 +1,33 @@
 import styled from '@emotion/styled';
 import { Box } from 'reflexbox';
+import { Button } from 'rebass';
 import Wave from 'react-wavify';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowAltCircleDown } from '@fortawesome/free-solid-svg-icons';
+
+function download() {
+    const { API_URL } = process.env;
+    const [download, setDownload] = useState(false);
+
+    fetch(
+        `${API_URL}/downloads`, {
+            method: "GET",
+            headers: {
+                "Content-Type" : "application/json"
+            },
+        })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch((error) => {
+        console.log("Error : ", error)
+    });
+
+    const handleDownload = (e) => {
+        e.preventDefault();
+        setIsDownloaded(true)
+    }
+
+}
 
 const Home = () => {
 
@@ -10,7 +37,12 @@ const Home = () => {
                 <Box className="wave-container">
                     <h1>Hi, I'm Nick Perry!</h1>
                     <h2> -Software Developer- </h2>
-                    <h3>/*Browse my projects, read about my background, and feel free to contact me*/</h3>
+                    <Box className="resume-text-button-container">
+                        <h3>Download my resume</h3>
+                        <a href="resume.pdf" target="_blank">
+                            <FontAwesomeIcon className="icon" icon={faArrowAltCircleDown} />
+                        </a>
+                    </Box>
                     <Wave className="wave" fill="url(#gradient)" options={{ amplitude: 20, speed: 0.25, points: 4 }}>
                         <defs>
                             <linearGradient id="gradient" gradientTransform="rotate(90deg)">
@@ -31,8 +63,7 @@ const HomeStyled = styled.div`
     padding: 0;
 
     .wave-container {
-        width: 100%;
-        margin-top: 14vh;
+        margin-top: 10vh;
 
         h1 {
             text-align: center;
@@ -44,11 +75,27 @@ const HomeStyled = styled.div`
             color: #7fffd4;
             font-size: 3rem;
         }
+    }
+    
+    .resume-text-button-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        gap: 1vw;
 
         h3 {
-            text-align: center;
             color: #fff;
-            margin-bottom: 4vh;
+        }
+        /* Button {
+        } */
+        .icon {
+            height: 35px;
+            background-color: #000000;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 50%;
         }
     }
 
