@@ -19,7 +19,7 @@ const Home = () => {
                             <FontAwesomeIcon className="icon" icon={faArrowAltCircleDown} />
                         </a>
                     </Box>
-                    <Wave className="wave" fill="url(#gradient)" options={{ amplitude: 20, speed: 0.25, points: 4 }}>
+                    <Wave className="wave" fill="url(#gradient)" options={{ amplitude: 30, speed: 0.25, points: 4 }}>
                         <defs>
                             <linearGradient id="gradient" gradientTransform="rotate(90deg)">
                                 <stop offset="10%" stopColor="#552586" />
@@ -40,7 +40,6 @@ const HomeStyled = styled.div`
 
     .wave-container {
         margin-top: 10vh;
-        height: 60vh;
 
         h1 {
             text-align: center;
@@ -76,7 +75,7 @@ const HomeStyled = styled.div`
     }
 
     .wave {
-        height: 100%;
+        height: 40vh;
         width: 100%;
     }
 `
