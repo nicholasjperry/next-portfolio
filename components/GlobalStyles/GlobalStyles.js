@@ -8,6 +8,8 @@ export default function GlobalStyles() {
                 html {
                     box-sizing: border-box; 
                     position: fixed;
+                    width: 100%;
+                    height: 100%;
                     overflow: auto;
                     top: 0;
                     left: 0;

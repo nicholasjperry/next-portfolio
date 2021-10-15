@@ -46,6 +46,7 @@ const HomeStyled = styled.div`
 
     .wave-container {
         margin-top: 10vh;
+        overflow: auto;
 
         h1 {
             text-align: center;
@@ -90,8 +91,7 @@ const HomeStyled = styled.div`
     }
 
     .wave {
-        height: 40vh;
-        width: 100%;
+        height: 50vh;
     }
 `
 
