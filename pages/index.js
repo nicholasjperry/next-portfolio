@@ -40,7 +40,7 @@ const HomeStyled = styled.div`
 
     .wave-container {
         margin-top: 10vh;
-        height: 50vh;
+        height: 60vh;
 
         h1 {
             text-align: center;
