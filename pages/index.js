@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { Box } from 'reflexbox';
+import Link from 'next/link';
 import { Button } from 'rebass';
 import Wave from 'react-wavify';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -18,6 +19,11 @@ const Home = () => {
                         <a href="resume.pdf" target="_blank">
                             <FontAwesomeIcon className="icon" icon={faArrowAltCircleDown} />
                         </a>
+                        <Link href="/contact">
+                            <Button className="button">
+                                Contact Me
+                            </Button>
+                        </Link>
                     </Box>
                     <Wave className="wave" fill="url(#gradient)" options={{ amplitude: 30, speed: 0.25, points: 4 }}>
                         <defs>
@@ -71,6 +77,15 @@ const HomeStyled = styled.div`
             color: #fff;
             cursor: pointer;
             border-radius: 50%;
+        }
+        
+        .button {
+            background-color: #000000;
+            color: #fff;
+            padding: 15px;
+            border-radius: 25px;
+            width: 135px;
+            cursor: pointer;
         }
     }
 

@@ -142,7 +142,6 @@ const NavigationStyled = styled.div`
     }
 
     .socials-container {
-
         ul {
             margin: 0 auto;
             padding: 0;
@@ -167,8 +166,8 @@ const NavigationStyled = styled.div`
     }
 `
 const Hamburger = styled.div`
-
     display: none;
+
     @media(max-width: 768px) {
         display: flex;
         flex-direction: column;
