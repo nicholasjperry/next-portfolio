@@ -40,6 +40,7 @@ const HomeStyled = styled.div`
 
     .wave-container {
         margin-top: 10vh;
+        height: 50vh;
 
         h1 {
             text-align: center;
@@ -64,8 +65,7 @@ const HomeStyled = styled.div`
         h3 {
             color: #fff;
         }
-        /* Button {
-        } */
+
         .icon {
             height: 35px;
             background-color: #000000;
@@ -76,7 +76,7 @@ const HomeStyled = styled.div`
     }
 
     .wave {
-        height: 45vh;
+        height: 100%;
         width: 100%;
     }
 `
