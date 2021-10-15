@@ -5,30 +5,6 @@ import Wave from 'react-wavify';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowAltCircleDown } from '@fortawesome/free-solid-svg-icons';
 
-function download() {
-    const { API_URL } = process.env;
-    const [download, setDownload] = useState(false);
-
-    fetch(
-        `${API_URL}/downloads`, {
-            method: "GET",
-            headers: {
-                "Content-Type" : "application/json"
-            },
-        })
-    .then(response => response.json())
-    .then(data => console.log(data))
-    .catch((error) => {
-        console.log("Error : ", error)
-    });
-
-    const handleDownload = (e) => {
-        e.preventDefault();
-        setIsDownloaded(true)
-    }
-
-}
-
 const Home = () => {
 
     return (
@@ -100,7 +76,8 @@ const HomeStyled = styled.div`
     }
 
     .wave {
-        height: 40vh;
+        height: 45vh;
+        width: 100%;
     }
 `
 
