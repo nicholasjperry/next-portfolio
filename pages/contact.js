@@ -133,18 +133,25 @@ function ContactForm () {
                         mt: "30px",
                         color: "#fff"
                     }}
+                    className="phone-email-container"
                 >
                     <Flex sx={{ m: 3, }} alignItems="center" justifyContent="space-between" flexDirection={{ _: "row" }} flexWrap="wrap">
                         <Box width={{ _: "5%" }}>
+                            <p>Phone</p>
+                        </Box>
+                        <Box width={{ _: "5%" }}>
                             <FontAwesomeIcon icon={faAddressBook}/>:
                         </Box>
-                        <Box width={{ _: "95%" }}>
+                        <Box width={{ _: "90%" }}>
                             <a href="tel:+1-615-414-3464">615-414-3464</a>
+                        </Box>
+                        <Box width={{ _: "5%" }}>
+                            <p>Email</p>
                         </Box>
                         <Box width={{ _: "5%" }}>
                             <FontAwesomeIcon icon={faEnvelope}/>:
                         </Box>
-                        <Box width={{ _: "95%" }}>
+                        <Box width={{ _: "90%" }}>
                             <a href="mailto:nicholasjperry@gmail.com">nicholasjperry1@gmail.com</a>
                         </Box>
                     </Flex>
@@ -191,6 +198,15 @@ const ContactStyled = styled.div`
         background-color: #7fffd4;
         color: black;
         border-radius: 10px;
+    }
+    .phone-email-container {
+        p {
+            color: #7fffd4;
+        }
+
+        a {
+            color: #fff;
+        }
     }
 `
 

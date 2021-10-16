@@ -83,6 +83,7 @@ const HomeStyled = styled.div`
         .button {
             background-color: #44d4ff;
             color: #000000;
+            font-weight: bold;
             padding: 15px;
             border-radius: 15px;
             width: 135px;
