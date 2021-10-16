@@ -4,6 +4,8 @@ import { Input } from '@rebass/forms';
 import { Button } from 'rebass';
 import fetch from 'isomorphic-unfetch';
 import { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAddressBook, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 
 function ContactForm () {
@@ -83,13 +85,13 @@ function ContactForm () {
                 </Box>
                 <Box sx={{
                         maxWidth: 1200,
-                        mx: 'auto',
+                        mx: "auto",
                         px: 3,
                     }} 
                         as="form" 
                         onSubmit={handleSubmit}
-                        className="form-container">
-                    <Flex sx={{ gap: 3 }}justifyContent="space-between" flexDirection={{ _: "column", 1: "row", 2: "row" }} flexWrap="wrap">
+                >
+                    <Flex sx={{ gap: 3 }} justifyContent="space-between" flexDirection={{ _: "column", 1: "row", 2: "row" }} flexWrap="wrap">
                         <Box width={{ _: "100%" }}>
                             <Input 
                                 id="message" 
@@ -122,6 +124,28 @@ function ContactForm () {
                         </Box>
                         <Box width={{ _: "100%", 1: "30%" }}>
                             <Button className="send-button">Send</Button>
+                        </Box>
+                    </Flex>
+                </Box>
+                <Box sx={{
+                        maxWidth: 1200,
+                        mx: "auto",
+                        mt: "30px",
+                        color: "#fff"
+                    }}
+                >
+                    <Flex sx={{ m: 3, }} alignItems="center" justifyContent="space-between" flexDirection={{ _: "row" }} flexWrap="wrap">
+                        <Box width={{ _: "5%" }}>
+                            <FontAwesomeIcon icon={faAddressBook}/>:
+                        </Box>
+                        <Box width={{ _: "95%" }}>
+                            <a href="tel:+1-615-414-3464">615-414-3464</a>
+                        </Box>
+                        <Box width={{ _: "5%" }}>
+                            <FontAwesomeIcon icon={faEnvelope}/>:
+                        </Box>
+                        <Box width={{ _: "95%" }}>
+                            <a href="mailto:nicholasjperry@gmail.com">nicholasjperry1@gmail.com</a>
                         </Box>
                     </Flex>
                 </Box>

@@ -81,12 +81,13 @@ const HomeStyled = styled.div`
         }
         
         .button {
-            background-color: #000000;
-            color: #fff;
+            background-color: #44d4ff;
+            color: #000000;
             padding: 15px;
-            border-radius: 25px;
+            border-radius: 15px;
             width: 135px;
             cursor: pointer;
+            margin-left: 30px;
         }
     }
 
