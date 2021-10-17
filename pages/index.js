@@ -51,6 +51,10 @@ const HomeStyled = styled.div`
         h1 {
             text-align: center;
             color: #7fffd4;
+
+            @media(max-width: 768px) {
+                margin-top: 0;
+            }
         }
 
         h2 {
@@ -67,6 +71,11 @@ const HomeStyled = styled.div`
         align-content: center;
         align-items: center;
         gap: 1vw;
+        
+        @media(max-width: 768px) {
+            display: flex;
+            flex-direction: column;
+        }
 
         h3 {
             color: #fff;
@@ -89,11 +98,22 @@ const HomeStyled = styled.div`
             width: 135px;
             cursor: pointer;
             margin-left: 30px;
+
+            @media(max-width: 768px) {
+                margin: 0;
+                justify-content: center;
+                margin-top: 30px;
+                width: 200px;
+             }
         }
     }
 
     .wave {
         height: 50vh;
+
+        @media(max-width: 768px) {
+            height: 30vh;
+        }
     }
 `
 

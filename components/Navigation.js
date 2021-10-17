@@ -64,6 +64,7 @@ const NavigationStyled = styled.div`
                 flex-direction: column;
                 flex-wrap: wrap;
                 max-height: ${({ isOpen }) => (isOpen ? "300px" : "0")};
+                position: relative;
                 text-align: center;
                 justify-content: center;
             }

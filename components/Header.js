@@ -13,9 +13,10 @@ function Header() {
 }
 
 const HeaderStyled = styled.header`
+    
     background: #000000;
     margin: 0;
-    height: 125px;
+    min-height: 125px;
     position: sticky;
     width: 100%;
 `
