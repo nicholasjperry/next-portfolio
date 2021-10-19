@@ -152,7 +152,7 @@ function ContactForm () {
                             <FontAwesomeIcon icon={faEnvelope}/>:
                         </Box>
                         <Box width={{ _: "100%", 1: "90%" }}>
-                            <a href="mailto:nicholasjperry@gmail.com">nicholasjperry1@gmail.com</a>
+                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=nicholasjperry1@gmail.com">nicholasjperry1@gmail.com</a>
                         </Box>
                     </Flex>
                 </Box>
@@ -198,6 +198,7 @@ const ContactStyled = styled.div`
         background-color: #7fffd4;
         color: black;
         border-radius: 10px;
+        font-family: 'Nova Mono', monospace;
     }
     .phone-email-container {
         p {

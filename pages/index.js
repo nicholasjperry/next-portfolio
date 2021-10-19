@@ -98,6 +98,7 @@ const HomeStyled = styled.div`
             width: 135px;
             cursor: pointer;
             margin-left: 30px;
+            font-family: 'Nova Mono', monospace;
 
             @media(max-width: 768px) {
                 margin: 0;
