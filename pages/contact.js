@@ -135,7 +135,7 @@ function ContactForm () {
                     }}
                     className="phone-email-container"
                 >
-                    <Flex sx={{ m: 3, }} alignItems="center" justifyContent="space-between" flexDirection={{ _: "row" }} flexWrap="wrap">
+                    <Flex sx={{ m: 3 }} alignItems="center" justifyContent="space-between" flexDirection={{ _: "row" }} flexWrap="wrap">
                         <Box width={{ _: "10%", 1: "5%" }}>
                             <p>Phone</p>
                         </Box>
