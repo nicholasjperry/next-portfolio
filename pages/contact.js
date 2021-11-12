@@ -130,28 +130,28 @@ function ContactForm () {
                 <Box sx={{
                         maxWidth: 1200,
                         mx: "auto",
-                        mt: "30px",
+                        mt: 30,
                         color: "#fff"
                     }}
                     className="phone-email-container"
                 >
-                    <Flex sx={{ m: 3 }} alignItems="center" justifyContent="space-between" flexDirection={{ _: "row" }} flexWrap="wrap">
-                        <Box width={{ _: "10%", 1: "5%" }}>
+                    <Flex sx={{ m: 3 }} alignItems="center" justifyContent="center" flexDirection={{ _: "column", 1: "row", 2: "row", 3: "row" }} flexWrap="wrap">
+                        <Box width={{ _: "100%", 1: "5%", 2: "5%" }}>
                             <p>Phone</p>
                         </Box>
-                        <Box width={{ _: "90%", 1: "5%" }}>
+                        <Box width={{ _: "100%", 1: "5%", 2: "5%" }}>
                             <FontAwesomeIcon icon={faAddressBook}/>:
                         </Box>
-                        <Box width={{ _: "100%", 1: "90%" }}>
+                        <Box width={{ _: "100%", 1: "90%", 2: "90%" }}>
                             <a href="tel:+1-615-414-3464">615-414-3464</a>
                         </Box>
-                        <Box width={{ _: "10%", 1: "5%" }}>
+                        <Box width={{ _: "100%", 1: "5%", 2: "5%" }}>
                             <p>Email</p>
                         </Box>
-                        <Box width={{ _: "90%", 1: "5%" }}>
+                        <Box width={{ _: "100%", 1: "5%", 2: "5%" }}>
                             <FontAwesomeIcon icon={faEnvelope}/>:
                         </Box>
-                        <Box width={{ _: "100%", 1: "90%" }}>
+                        <Box width={{ _: "100%", 1: "90%", 2: "90%" }}>
                             <a href="https://mail.google.com/mail/?view=cm&fs=1&to=nicholasjperry1@gmail.com">nicholasjperry1@gmail.com</a>
                         </Box>
                     </Flex>
@@ -174,6 +174,10 @@ const ContactStyled = styled.div`
         box-shadow: 0 0 10px rgba(0,0,0, 0.5);
         background-color: #fff;
     }
+
+    #message-error {
+        color: #d47fff;
+    }
     
     #email {
         padding-bottom: 10px;
@@ -181,12 +185,20 @@ const ContactStyled = styled.div`
         box-shadow: 0 0 10px rgba(0,0,0, 0.5);
         background-color: #fff;
     }
+
+    #email-address-error {
+        color: #d47fff;
+    }
     
     #name {
         padding-bottom: 10px;
         border: 1px;
         box-shadow: 0 0 10px rgba(0,0,0, 0.5);
         background-color: #fff;
+    }
+
+    #fullname-error {
+        color: #d47fff;
     }
 
     .send-button{
