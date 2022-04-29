@@ -6,6 +6,7 @@ import fetch from 'isomorphic-unfetch';
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAddressBook, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { motion } from "framer-motion";
 
 
 function ContactForm () {
@@ -77,12 +78,16 @@ function ContactForm () {
 
     return (
 
-        <>
+        <Box className="background">
             <ContactStyled>
-                <Box className="heading">
+                <motion.div
+                    animate={{ y: [-75, 0] }}
+                    transition={{ duration: 0.5 }}
+                    style={{ textAlign: "center" }}
+                >
                     <h1>Get In Touch</h1>
-                    <h2>Send Me A Message</h2>
-                </Box>
+                </motion.div>
+                <h2 style={{ textAlign: "center" }}>Send Me A Message</h2>
                 <Box sx={{
                         maxWidth: 1200,
                         mx: "auto",
@@ -135,7 +140,7 @@ function ContactForm () {
                     }}
                     className="phone-email-container"
                 >
-                    <Flex sx={{ m: 3 }} alignItems="center" justifyContent="center" flexDirection={{ _: "column", 1: "row", 2: "row", 3: "row" }} flexWrap="wrap">
+                    <Flex sx={{ m: 3, marginBottom: 300 }} alignItems="center" justifyContent="center" flexDirection={{ _: "column", 1: "row", 2: "row", 3: "row" }} flexWrap="wrap">
                         <Box width={{ _: "100%", 1: "5%", 2: "5%" }}>
                             <p>Phone</p>
                         </Box>
@@ -157,7 +162,7 @@ function ContactForm () {
                     </Flex>
                 </Box>
             </ContactStyled>
-        </>
+        </Box>
     );
 }
 

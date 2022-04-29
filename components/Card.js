@@ -3,13 +3,8 @@ import Link from 'next/link';
 
 function Card ({ project }) {
 
-    // const { API_URL } = process.env
-
     return (
         <CardStyled>
-            {/* <div className="poster">
-                <img src={project.media[0]} alt="" />
-            </div> */}
             <div className="body">
                 <h3>{project.title}</h3>
                 <h4>{project.caption}</h4>
@@ -22,7 +17,8 @@ function Card ({ project }) {
 }
 
 const CardStyled = styled.div`
-    background-color: #7fffd4;
+    background-image: 
+        linear-gradient(90deg, #a6ffe1, #09ffac);
     height: 300px;
     width: 100%;
     border: 3px #cccccc;
@@ -38,7 +34,7 @@ const CardStyled = styled.div`
 
     .body {
 
-        padding: 20px;
+        padding: 70px;
 
         h3 {
             text-decoration: underline;

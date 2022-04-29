@@ -1,91 +1,83 @@
 import styled from '@emotion/styled';
 import { Flex, Box } from 'reflexbox';
 import Image from 'next/image';
-import { useEffect } from 'react';
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
+import TechnologiesUsed from '../components/TechnologiesUsed';
+import Parallax from '../components/Parallax';
+import AboutTextAnimation from '../components/AboutTextAnimation';
 
-function About() {
-    
-    const TechnologiesUsed = () => {
-    
-        const {ref, inView} = useInView({
-        });
-        const animation = useAnimation();
-    
-        useEffect(() => {
-            if (inView) {
-                animation.start( {opacity: 1 }, { duration: 2 } );
-            }
-            if (!inView) {
-                animation.start({opacity: 0})
-            }
-        }, [inView]);
-    
-        return(
-            <motion.div ref={ref} animate={animation}>
-                <Box sx={{
-                        maxWidth: "1200px",
-                        mx: "auto",
-                        alignContent: "center",
-                        
-                    }}
-                >
-                    <Flex justifyContent="space-between"  alignItems="center" flexDirection={{ _: "column", 1: "row", 2: "row" }} mt={30} mb={30} sx={{ gap: 100}}>
-                        <Box width={{ _: "100%", 1: "100%", 2: "33%" }}>
-                            <Image 
-                                src="https://res.cloudinary.com/ddbycjzyd/image/upload/c_crop,e_bgremoval,o_100,q_100/v1636141680/next-js-logo_yhajpm.png" 
-                                width={300}
-                                height={150}
-                            />
-                        </Box>
-                        <Box width={{ _: "100%", 1: "100%", 2: "33%" }}>
-                            <Image 
-                                src="https://res.cloudinary.com/ddbycjzyd/image/upload/c_scale,w_400/v1636749752/strapi-logo_jy88ad.jpg" 
-                                width={400}
-                                height={119}
-                            />
-                        </Box>
-                        <Box width={{ _: "100%", 1: "100%", 2: "33%" }}>
-                            <Image 
-                                src="https://res.cloudinary.com/ddbycjzyd/image/upload/c_scale,e_bgremoval,o_100,q_100,w_400/v1636750266/react-logo_ypxc5q.svg" 
-                                width={300}
-                                height={150}
-                            />
-                        </Box>
-                    </Flex>
-                </Box>
-            </motion.div>
-        );
-    }
+function About({ technologies }) {
 
     return(
-        <>
+        <Box className="background">
             <AboutStyled>
-                <h1>About Me</h1>
+                <motion.div
+                    animate={{ y: [-75, 0] }}
+                    transition={{ duration: 0.5 }}
+                >
+                    <h1>About Me</h1>
+                </motion.div>
                 <Box sx={{
                     maxWidth: 1200,
-                    mx: "auto",                
+                    mx: "auto",
+                    p: 3,
+                    mt: -40           
                 }}>
-                    <Flex justifyContent="center" flexDirection={{ _: "column" }}>
-                        <Box as="h2" className="paragraph-container" width={{ _: "100%" }}>
-                            Hello there, welcome to my Portfolio Website!  Thanks for taking a look around.  Here's some more details about me...
-                        </Box>
-                        <Box className="image-container" width={{ _: "100%" }}>
+                    <Flex justifyContent="center" alignItems="center" flexDirection={{ _: "column", 1: "column", 2: "row" }}>
+                        <Box className="image-container" width={{ _: "60%" }}>
                             <Image 
-                                src="https://res.cloudinary.com/ddbycjzyd/image/upload/c_fit,h_600,w_500/v1632189261/20210908_105613_cigclw.jpg" alt="" 
-                                width={500} 
+                                src="https://res.cloudinary.com/ddbycjzyd/image/upload/c_scale,w_1252/v1642734312/mtbelfordpic_mpa5th.jpg" alt="" 
+                                width={450} 
                                 height={600}
                                 className="image"
                             />
                         </Box>
+                        <Box as="h2" className="paragraph-container" width={{ _: "60%" }}>
+                            <AboutTextAnimation />
+                        </Box>
                     </Flex>
                 </Box>
                 <h1>Technologies I Use</h1>
-                <TechnologiesUsed />
-            </AboutStyled>
-        </>
+                <TechnologiesUsed technologies={technologies}/>
+                <Parallax />
+                <Box sx={{
+                    maxWidth: 1400,
+                    mx: "auto",                
+                    my: "100px",
+                    px: 3
+                }}>
+                    <h1>Education</h1>
+                    <Flex sx={{ gridGap: 4 }} mt={60} justifyContent="center" alignContent="center" flexDirection={{ _: "column", 1: "column", 2: "row" }}>
+                        <Box className="logo-container" width={{ _: "100%", 1: "50%" }}>
+                            <Image width={{  }}
+                                src="https://res.cloudinary.com/ddbycjzyd/image/upload/v1643592285/nucamplogo_in9d6t.svg" alt=""
+                                width={500}
+                                height={150}
+                            />
+                        </Box>
+                        <Box className="paragraph-container" sx={{ textAlign: "left", color: "#fff", fontSize: "25px", marginBottom: 200 }} width={{ _: "100%", 1: "70%" }}>
+                            Attended this hybrid coding bootcamp, in which Javascript was heavily utilized.  MongoDB, Express.js, React/React Native, and Node.js
+                            (MERN) were employed in a multitude of coding exercises as well as to the guided construction of NuCamp's mock web app layed out for 
+                            the students to recreate.
+                        </Box>
+                    </Flex>
+                </Box>
+            </AboutStyled>            
+        </Box>
     );
+}
+
+export async function getServerSideProps() {
+    const { API_URL } = process.env;
+
+    const res = await fetch(`${API_URL}/technologies`);
+    const data = await res.json();
+
+    return {
+        props: {
+            technologies: data
+        }
+    }
 }
 
 const AboutStyled = styled.div `
@@ -95,14 +87,13 @@ const AboutStyled = styled.div `
     }
 
     .image-container {
-        margin: 1em;
+        margin: 1.25em;
         text-align: center;
         transform: translate(-2%, 5%);
-        margin: 10px;
     }
 
     .image {
-        border-radius: 50px;
+        border-radius: 50%;
     }
     
     .paragraph-container {
@@ -112,15 +103,55 @@ const AboutStyled = styled.div `
         border-image-slice: 1;
         padding: 0.5rem;
         box-shadow: 0 0 20px rgba(0,0,0, 0.1);
-        color: #fff;
-        font-size: 30px;
+        color: #7fffd4;
     }
-    
-    .technologies {
-        color: white;
-        width: 100%;
-        height: 100px;
+
+    .logo-container{
+        text-align: center;
     }
 `
 
 export default About;
+
+{/* <Box mx="30px" width={{ _: "33%", 1: "33%", 2: "60%" }}>
+        <Image 
+            src="https://res.cloudinary.com/ddbycjzyd/image/upload/c_crop,e_bgremoval,o_100,q_100/v1636141680/next-js-logo_yhajpm.png" 
+            width={300}
+            height={150}
+        />
+    </Box>
+    <Box width={{ _: "33%", 1: "33%", 2: "60%" }}>
+        <Image 
+            src="https://res.cloudinary.com/ddbycjzyd/image/upload/c_scale,w_400/v1636749752/strapi-logo_jy88ad.jpg" 
+            width={400}
+            height={119}
+        />
+    </Box>
+    <Box width={{ _: "33%", 1: "33%", 2: "60%" }}>
+        <Image 
+            src="https://res.cloudinary.com/ddbycjzyd/image/upload/c_scale,e_bgremoval,o_100,q_100,w_400/v1636750266/react-logo_ypxc5q.svg" 
+            width={300}
+            height={150}
+        />
+    </Box>
+    <Box width={{ _: "33%", 1: "33%", 2: "60%" }}>
+        <Image 
+            src="https://res.cloudinary.com/ddbycjzyd/image/upload/c_scale,e_bgremoval,w_400/v1638657680/HTML5-logo_uox6vl.svg" 
+            width={400}
+            height={300}
+        />
+    </Box>
+    <Box width={{ _: "33%", 1: "33%", 2: "60%" }}>
+        <Image 
+            src="https://res.cloudinary.com/ddbycjzyd/image/upload/c_scale,e_bgremoval,h_400/v1638658081/CSS-logo_jnerdl.svg" 
+            width={400}
+            height={300}
+        />
+    </Box>
+    <Box width={{ _: "33%", 1: "33%", 2: "60%" }}>
+        <Image 
+            src="https://res.cloudinary.com/ddbycjzyd/image/upload/c_scale,w_400/v1638658416/JS-logo_bx7hhd.png" 
+            width={300}
+            height={300}
+        />
+    </Box> */}

@@ -1,13 +1,10 @@
 import styled from '@emotion/styled';
-import { Box } from 'reflexbox';
 import Navigation from 'components/Navigation';
 
 function Header() {
     return (
         <HeaderStyled>
-            <Box>
-                <Navigation />
-            </Box>
+            <Navigation />
         </HeaderStyled>
     );
 }
@@ -16,7 +13,7 @@ const HeaderStyled = styled.header`
     
     background: #000000;
     margin: 0;
-    min-height: 125px;
+    min-height: 135px;
     position: sticky;
     width: 100%;
 `

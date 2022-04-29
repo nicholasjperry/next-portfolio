@@ -9,11 +9,11 @@ import { faArrowAltCircleDown } from '@fortawesome/free-solid-svg-icons';
 const Home = () => {
 
     return (
-        <>
+        <Box className="background">
             <HomeStyled>
                 <Box className="wave-container">
-                    <h1>Hi, I'm Nick Perry!</h1>
-                    <h2> -Software Developer- </h2>
+                    <h1>Nick Perry</h1>
+                    <h2>Software Developer</h2>
                     <Box className="resume-text-button-container">
                         <h3>Download my resume</h3>
                         <a href="resume.pdf" target="_blank">
@@ -35,14 +35,11 @@ const Home = () => {
                     </Wave>
                 </Box>
             </HomeStyled>
-        </>
+        </Box>
     );
 }
 
 const HomeStyled = styled.div`
-
-    margin: 0;
-    padding: 0;
 
     .wave-container {
         margin-top: 10vh;

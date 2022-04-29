@@ -5,11 +5,14 @@ export default function GlobalStyles() {
         <>
             <Global styles={css`
 
+                @keyframes sky-move {
+                    from {background-position: 0 0;}
+                    to {background-position: -100000px 100000px;}
+                }
+
                 html {
                     box-sizing: border-box; 
                     position: fixed;
-                    width: 100%;
-                    height: 100%;
                     overflow: auto;
                     top: 0;
                     left: 0;
@@ -18,14 +21,23 @@ export default function GlobalStyles() {
                 }
     
                 body {
-                    width: 100%;
-                    height: 100%;
                     overflow: auto;
                     overflow-x: hidden;
                     margin: 0;
                     padding: 0;
                     font-family: 'Nova Mono', monospace;
-                    background: radial-gradient(circle at top, #36454f, black 100%);
+                }
+
+                .background {
+                    width: 100vw;
+                    height: 100vh;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    overflow: auto;
+                    background-image: url('/images/stars.png');
+                    animation: sky-move 12000s infinite;
                 }
     
                 h1 {
