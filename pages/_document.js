@@ -12,7 +12,8 @@ class MyDocument extends Document {
         <Head>
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-          <link href="https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap" rel="stylesheet" />
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap" />
+          <link rel="icon" href="icon.png" />
         </Head>
         <body>
           <Main />

@@ -33,12 +33,12 @@ function Navigation() {
                 <Box className="socials-container">
                     <ul>
                         <li>
-                            <a href="https://www.github.com/nicholasjperry">
+                            <a target="_blank" rel="noreferrer noopener" href="https://www.github.com/nicholasjperry">
                                 <FontAwesomeIcon className="icon" icon={faGithub} />
                             </a>
                         </li>
                         <li>
-                            <a href="https://www.linkedin.com/in/nicholas-j-perry">
+                            <a target="_blank" rel="noreferrer noopener" href="https://www.linkedin.com/in/nicholas-j-perry">
                                 <FontAwesomeIcon className="icon" icon={faLinkedin} />
                             </a>
                         </li>

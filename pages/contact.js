@@ -77,7 +77,6 @@ function ContactForm () {
     }
 
     return (
-
         <Box className="background">
             <ContactStyled>
                 <motion.div
@@ -96,7 +95,12 @@ function ContactForm () {
                         as="form" 
                         onSubmit={handleSubmit}
                 >
-                    <Flex sx={{ gap: 3 }} justifyContent="space-between" flexDirection={{ _: "column", 1: "row", 2: "row" }} flexWrap="wrap">
+                    <Flex 
+                        sx={{ gap: 3 }} 
+                        justifyContent="space-between" 
+                        flexDirection={{ _: "column", 1: "row", 2: "row" }} 
+                        flexWrap="wrap"
+                    >
                         <Box width={{ _: "100%" }}>
                             <Input 
                                 id="message" 
@@ -140,7 +144,13 @@ function ContactForm () {
                     }}
                     className="phone-email-container"
                 >
-                    <Flex sx={{ m: 3, marginBottom: 300 }} alignItems="center" justifyContent="center" flexDirection={{ _: "column", 1: "row", 2: "row", 3: "row" }} flexWrap="wrap">
+                    <Flex 
+                        sx={{ m: 3, marginBottom: 300 }} 
+                        alignItems="center" 
+                        justifyContent="center" 
+                        flexDirection={{ _: "column", 1: "row", 2: "row", 3: "row" }} 
+                        flexWrap="wrap"
+                    >
                         <Box width={{ _: "100%", 1: "5%", 2: "5%" }}>
                             <p>Phone</p>
                         </Box>

@@ -25,7 +25,6 @@ export default function AboutTextAnimation() {
 
     return(
         <motion.p
-            className="typed-out"
             variants={line}
             initial="hidden"
             animate="visible"

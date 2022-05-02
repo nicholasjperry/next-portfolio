@@ -10,7 +10,6 @@ function Header() {
 }
 
 const HeaderStyled = styled.header`
-    
     background: #000000;
     margin: 0;
     min-height: 135px;

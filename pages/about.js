@@ -23,7 +23,12 @@ function About({ technologies }) {
                     p: 3,
                     mt: -40           
                 }}>
-                    <Flex justifyContent="center" alignItems="center" flexDirection={{ _: "column", 1: "column", 2: "row" }}>
+                    <Flex 
+                        justifyContent="center" 
+                        alignContent="center" 
+                        alignItems="center" 
+                        flexDirection={{ _: "column", 1: "column", 2: "row" }}
+                    >
                         <Box className="image-container" width={{ _: "60%" }}>
                             <Image 
                                 src="https://res.cloudinary.com/ddbycjzyd/image/upload/c_scale,w_1252/v1642734312/mtbelfordpic_mpa5th.jpg" alt="" 
@@ -47,9 +52,14 @@ function About({ technologies }) {
                     px: 3
                 }}>
                     <h1>Education</h1>
-                    <Flex sx={{ gridGap: 4 }} mt={60} justifyContent="center" alignContent="center" flexDirection={{ _: "column", 1: "column", 2: "row" }}>
+                    <Flex 
+                        sx={{ gridGap: 4 }} 
+                        mt={60} justifyContent="center" 
+                        alignContent="center" 
+                        flexDirection={{ _: "column", 1: "column", 2: "row" }}
+                    >
                         <Box className="logo-container" width={{ _: "100%", 1: "50%" }}>
-                            <Image width={{  }}
+                            <Image
                                 src="https://res.cloudinary.com/ddbycjzyd/image/upload/v1643592285/nucamplogo_in9d6t.svg" alt=""
                                 width={500}
                                 height={150}
@@ -87,7 +97,7 @@ const AboutStyled = styled.div `
     }
 
     .image-container {
-        margin: 1.25em;
+        margin-bottom: 4rem;
         text-align: center;
         transform: translate(-2%, 5%);
     }
@@ -112,46 +122,3 @@ const AboutStyled = styled.div `
 `
 
 export default About;
-
-{/* <Box mx="30px" width={{ _: "33%", 1: "33%", 2: "60%" }}>
-        <Image 
-            src="https://res.cloudinary.com/ddbycjzyd/image/upload/c_crop,e_bgremoval,o_100,q_100/v1636141680/next-js-logo_yhajpm.png" 
-            width={300}
-            height={150}
-        />
-    </Box>
-    <Box width={{ _: "33%", 1: "33%", 2: "60%" }}>
-        <Image 
-            src="https://res.cloudinary.com/ddbycjzyd/image/upload/c_scale,w_400/v1636749752/strapi-logo_jy88ad.jpg" 
-            width={400}
-            height={119}
-        />
-    </Box>
-    <Box width={{ _: "33%", 1: "33%", 2: "60%" }}>
-        <Image 
-            src="https://res.cloudinary.com/ddbycjzyd/image/upload/c_scale,e_bgremoval,o_100,q_100,w_400/v1636750266/react-logo_ypxc5q.svg" 
-            width={300}
-            height={150}
-        />
-    </Box>
-    <Box width={{ _: "33%", 1: "33%", 2: "60%" }}>
-        <Image 
-            src="https://res.cloudinary.com/ddbycjzyd/image/upload/c_scale,e_bgremoval,w_400/v1638657680/HTML5-logo_uox6vl.svg" 
-            width={400}
-            height={300}
-        />
-    </Box>
-    <Box width={{ _: "33%", 1: "33%", 2: "60%" }}>
-        <Image 
-            src="https://res.cloudinary.com/ddbycjzyd/image/upload/c_scale,e_bgremoval,h_400/v1638658081/CSS-logo_jnerdl.svg" 
-            width={400}
-            height={300}
-        />
-    </Box>
-    <Box width={{ _: "33%", 1: "33%", 2: "60%" }}>
-        <Image 
-            src="https://res.cloudinary.com/ddbycjzyd/image/upload/c_scale,w_400/v1638658416/JS-logo_bx7hhd.png" 
-            width={300}
-            height={300}
-        />
-    </Box> */}

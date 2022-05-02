@@ -8,11 +8,11 @@ import { NextSeo } from 'next-seo';
 function Project({ project }) {
 
     const SEO = {
-        title: `Portfolio Website | ${project.title}`,
+        title: `nicholasjperry.com | ${project.title}`,
         description: project.description,
 
         openGraph: {
-            title: `Portfolio Website | ${project.title}`,
+            title: `nicholasjperry.com | ${project.title}`,
             description: project.title,
         }
     }
@@ -33,7 +33,7 @@ function Project({ project }) {
                 >
                     <Box as="h1" className="project-title">{project.title}</Box>
                     <Flex 
-                        flexDirection={{ _: "column", 1: "column", 2: "row", 3: "row", 4: "row" }}
+                        flexDirection={{ _: "column", 1: "column", 2: "row" }}
                         justifyContent="space-between"
                         alignItems="center"
                         alignContent="center" 
@@ -55,7 +55,7 @@ function Project({ project }) {
                             </Box>
                             <Box className="link-container" width={{ _: "100%", 1: "100%", 2: "120%" }}>
                                 <Link href={project.link}>
-                                    <a className="project-link">{linkText}</a>
+                                    <a className="project-link" target="_blank" rel="noreferrer noopener">{linkText}</a>
                                 </Link>
                             </Box>
                         </Flex>
@@ -73,11 +73,10 @@ export async function getServerSideProps(context) {
     const { slug } = context.query;
     const res = await fetch(`${publicRuntimeConfig.API_URL}/projects?slug=${slug}`);
     const data = await res.json();
-    const project = data[0]
 
     return {
         props: {
-            project
+            project: data[0]
         },
     }
 }
@@ -118,7 +117,6 @@ const ProjectStyled = styled.div`
         a {
             color: #fff;
             font-size: 35px;
-            /* text-decoration: none; */
         }
     }
 
@@ -143,8 +141,6 @@ const ProjectStyled = styled.div`
         @media only screen and (min-width: 915px) {
             width: 700px;
         }
-    }
-    .link-container {
     }
 `
 

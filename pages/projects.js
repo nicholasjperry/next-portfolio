@@ -21,7 +21,11 @@ function Projects({projects}) {
                     mt: "50px",
                     alignContent: "center"
                 }}>
-                    <Flex sx={{  gridGap: 3, marginBottom: 300 }} justifyContent="space-between" flexDirection={{ _: "column", 1: "column", 2: "row" }}>
+                    <Flex 
+                        sx={{  gridGap: 3, marginBottom: 300 }} 
+                        justifyContent="space-between" 
+                        flexDirection={{ _: "column", 1: "column", 2: "row" }}
+                    >
                         {projects.map(project => (
                             <motion.div 
                                 key={project.id} 
