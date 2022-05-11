@@ -1,5 +1,5 @@
 {
-  "name": "PortfolioWebsite",
+  "name": "next-portfolio",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,7 +10,7 @@
     "export": "next build && next export"
   },
   "keywords": [],
-  "author": "",
+  "author": "Nick Perry",
   "license": "ISC",
   "dependencies": {
     "@emotion/react": "^11.1.4",
