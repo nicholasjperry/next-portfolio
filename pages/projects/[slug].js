@@ -2,7 +2,6 @@ import styled from '@emotion/styled';
 import { Flex, Box } from 'reflexbox';
 import Link from 'next/link'
 import getConfig from 'next/config';
-import fetch from 'isomorphic-unfetch';
 import { NextSeo } from 'next-seo';
 
 function Project({ project }) {
@@ -17,7 +16,7 @@ function Project({ project }) {
         }
     }
 
-    const linkText = "-->View Code on Github<--"
+    const linkText = "View Code on Github"
 
     return(
         <ProjectStyled>
@@ -54,7 +53,7 @@ function Project({ project }) {
                                 </video>
                             </Box>
                             <Box className="link-container" width={{ _: "100%", 1: "100%", 2: "120%" }}>
-                                <Link href={project.link}>
+                                <Link href={project.link} prefetch={false}>
                                     <a className="project-link" target="_blank" rel="noreferrer noopener">{linkText}</a>
                                 </Link>
                             </Box>

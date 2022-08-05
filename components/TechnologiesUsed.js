@@ -29,8 +29,8 @@ const TechnologiesUsed = ({technologies}) => {
                 <Flex justifyContent="center" alignItems="center" flexDirection={{ _: "column", 1: "column", 2: "row", 3: "row", 4: "row" }} mt={60} sx={{ gap: 80}}>
                     {technologies && technologies.map(technology => {
                         return(
-                            <Box width={{ _:"20%" }}>
-                                <Image key={technology.id} src={technology.avatar.name} width={270} height={175} />
+                            <Box key={technology.id} width={{ _:"20%" }}>
+                                <Image src={technology.avatar.name} width={270} height={175} />
                             </Box>
                         );
                     })}

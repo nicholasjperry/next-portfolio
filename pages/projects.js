@@ -1,18 +1,16 @@
 import styled from '@emotion/styled';
 import { Flex, Box } from 'reflexbox';
 import Card from 'components/Card';
-import { motion } from "framer-motion";
+import HeaderMotion from '../components/HeaderMotion';
+import { motion } from 'framer-motion';
 
 function Projects({projects}) {
     return(
         <Box className="background">
             <ProjectsStyled>
-                <motion.div
-                    animate={{ y: [-75, 0] }}
-                    transition={{ duration: 0.5 }}
-                >
+                <HeaderMotion>
                     <h1 style={{ textAlign: "center" }}>Projects</h1>
-                </motion.div>
+                </HeaderMotion>
                 <h2 style={{ textAlign: "center" }}>A List of My Projects</h2>
                 <Box sx={{
                     maxWidth: "1200px",

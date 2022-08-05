@@ -4,12 +4,6 @@ export default function GlobalStyles() {
     return (    
         <>
             <Global styles={css`
-
-                @keyframes sky-move {
-                    from {background-position: 0 0;}
-                    to {background-position: -100000px 100000px;}
-                }
-
                 html {
                     box-sizing: border-box; 
                     position: fixed;
@@ -37,8 +31,13 @@ export default function GlobalStyles() {
                     right: 0;
                     overflow: auto;
                     background-image: url('/images/stars.png');
-                    animation: sky-move 12000s infinite;
+                    /* animation: sky-move 12000s infinite; */
                 }
+                
+                /* @keyframes sky-move {
+                    from {background-position: 0 0;}
+                    to {background-position: -100000px 100000px;}
+                } */
     
                 h1 {
                     font-size: 4rem;

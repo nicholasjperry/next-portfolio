@@ -8,7 +8,7 @@ function Card ({ project }) {
             <div className="body">
                 <h3>{project.title}</h3>
                 <h4>{project.caption}</h4>
-                <Link href="/projects/[slug]" as={`/projects/${project.slug}`}>
+                <Link href="/projects/[slug]" as={`/projects/${project.slug}`} prefetch={false}>
                     <a>Click to read more...</a>
                 </Link>
             </div>

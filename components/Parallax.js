@@ -11,7 +11,7 @@ export default function Parallax() {
 
 const ParallaxStyled = styled.div`
     .parallax {
-        background-image: url("https://res.cloudinary.com/ddbycjzyd/image/upload/v1649884917/buenavista_r3gz0q.jpg");
+        background-image: url(../images/buenavista2.jpeg);
         margin-top: 100px;
         min-height: 500px;
         background-attachment: fixed;

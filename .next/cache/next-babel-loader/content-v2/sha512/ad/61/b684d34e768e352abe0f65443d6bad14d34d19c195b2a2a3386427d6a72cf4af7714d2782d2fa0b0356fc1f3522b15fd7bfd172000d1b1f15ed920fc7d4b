@@ -1,0 +1,1 @@
+{"ast":null,"code":"const breakpoints = ['360px', '768px', '1024px', '1280px', '1600px'];\nbreakpoints.sm = breakpoints[0];\nbreakpoints.md = breakpoints[1];\nbreakpoints.lg = breakpoints[2];\nbreakpoints.xl = breakpoints[3];\nbreakpoints.xxl = breakpoints[4];\nexport default {\n  breakpoints\n};","map":null,"metadata":{},"sourceType":"module"}

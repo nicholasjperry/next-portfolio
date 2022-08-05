@@ -5,7 +5,8 @@ import { useRouter } from 'next/router';
 import { useState, useContext } from 'react';
 import HeaderContext from '../contexts/HeaderContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub';
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons/faLinkedin';
 
 function Navigation() {
 
@@ -17,13 +18,13 @@ function Navigation() {
         <>
             <NavigationStyled color={color} isOpen={isOpen}>
                 <Box className="nav-container">
-                    <Link href="/"><a>NP</a></Link>
+                    <Link href="/" prefetch={false}><a>NP</a></Link>
                 </Box>
                 <Box className="menu-container">
                     <ul>
                         {menuItems.map(item => (
                             <li key={item.id}>
-                                <Link href={item.slug}>
+                                <Link href={item.slug} prefetch={false}>
                                     <a className={router.pathname === item.slug ? 'active' : '' }>{item.title}</a>  
                                 </Link>
                             </li>

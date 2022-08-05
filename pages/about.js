@@ -1,22 +1,21 @@
 import styled from '@emotion/styled';
 import { Flex, Box } from 'reflexbox';
 import Image from 'next/image';
-import { motion } from "framer-motion";
-import TechnologiesUsed from '../components/TechnologiesUsed';
-import Parallax from '../components/Parallax';
-import AboutTextAnimation from '../components/AboutTextAnimation';
+import HeaderMotion from '../components/HeaderMotion';
+
+import dynamic from 'next/dynamic';
+const DynamicTechnologiesUsed = dynamic(() => import('../components/TechnologiesUsed'));
+const DynamicParallax = dynamic(() => import('../components/Parallax'));
+const DynamicAboutTextAnimation = dynamic(() => import('../components/AboutTextAnimation'));
 
 function About({ technologies }) {
 
     return(
         <Box className="background">
             <AboutStyled>
-                <motion.div
-                    animate={{ y: [-75, 0] }}
-                    transition={{ duration: 0.5 }}
-                >
+                <HeaderMotion>
                     <h1>About Me</h1>
-                </motion.div>
+                </HeaderMotion>
                 <Box sx={{
                     maxWidth: 1200,
                     mx: "auto",
@@ -31,20 +30,21 @@ function About({ technologies }) {
                     >
                         <Box className="image-container" width={{ _: "60%" }}>
                             <Image 
-                                src="https://res.cloudinary.com/ddbycjzyd/image/upload/c_scale,w_1252/v1642734312/mtbelfordpic_mpa5th.jpg" alt="" 
+                                src="/images/mtbeldfordpic2.jpeg" alt="" 
                                 width={450} 
                                 height={600}
                                 className="image"
+                                priority={true}
                             />
                         </Box>
                         <Box as="h2" className="paragraph-container" width={{ _: "60%" }}>
-                            <AboutTextAnimation />
+                            <DynamicAboutTextAnimation />
                         </Box>
                     </Flex>
                 </Box>
                 <h1>Technologies I Use</h1>
-                <TechnologiesUsed technologies={technologies}/>
-                <Parallax />
+                <DynamicTechnologiesUsed technologies={technologies}/>
+                <DynamicParallax />
                 <Box sx={{
                     maxWidth: 1400,
                     mx: "auto",                
@@ -60,9 +60,11 @@ function About({ technologies }) {
                     >
                         <Box className="logo-container" width={{ _: "100%", 1: "50%" }}>
                             <Image
-                                src="https://res.cloudinary.com/ddbycjzyd/image/upload/v1643592285/nucamplogo_in9d6t.svg" alt=""
+                                src="/images/nucamplogo2.svg" alt=""
                                 width={500}
                                 height={150}
+                                priority={true}
+                                placeholder="blur"
                             />
                         </Box>
                         <Box className="paragraph-container" sx={{ textAlign: "left", color: "#fff", fontSize: "25px", marginBottom: 200 }} width={{ _: "100%", 1: "70%" }}>

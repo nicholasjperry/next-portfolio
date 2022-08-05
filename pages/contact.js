@@ -2,11 +2,11 @@ import styled from '@emotion/styled';
 import { Flex, Box } from 'reflexbox';
 import { Input } from '@rebass/forms';
 import { Button } from 'rebass';
-import fetch from 'isomorphic-unfetch';
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAddressBook, faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { motion } from "framer-motion";
+import { faAddressBook } from '@fortawesome/free-solid-svg-icons/faAddressBook';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons/faEnvelope';
+import HeaderMotion from '../components/HeaderMotion';
 
 
 function ContactForm () {
@@ -79,14 +79,12 @@ function ContactForm () {
     return (
         <Box className="background">
             <ContactStyled>
-                <motion.div
-                    animate={{ y: [-75, 0] }}
-                    transition={{ duration: 0.5 }}
-                    style={{ textAlign: "center" }}
-                >
-                    <h1>Get In Touch</h1>
-                </motion.div>
-                <h2 style={{ textAlign: "center" }}>Send Me A Message</h2>
+                <Box classname="headings">
+                    <HeaderMotion>
+                        <h1 style={{  textAlign: "center" }}>Get In Touch</h1>
+                    </HeaderMotion>
+                    <h2 style={{ textAlign: "center" }}>Send Me A Message</h2>
+                </Box>
                 <Box sx={{
                         maxWidth: 1200,
                         mx: "auto",
@@ -177,7 +175,7 @@ function ContactForm () {
 }
 
 const ContactStyled = styled.div`
-    .heading {
+    .headings {
         text-align: center;
         margin-bottom: 40px;
     }

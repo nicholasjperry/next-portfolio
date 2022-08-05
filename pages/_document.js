@@ -11,8 +11,8 @@ class MyDocument extends Document {
       <Html>
         <Head>
           <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
+          <link href="https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap" rel="stylesheet" />
           <link rel="icon" href="icon.png" />
         </Head>
         <body>

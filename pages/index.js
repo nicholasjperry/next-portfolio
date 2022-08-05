@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { Button } from 'rebass';
 import Wave from 'react-wavify';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowAltCircleDown } from '@fortawesome/free-solid-svg-icons';
+import { faArrowAltCircleDown } from '@fortawesome/free-solid-svg-icons/faArrowAltCircleDown';
 
 const Home = () => {
 
@@ -19,7 +19,7 @@ const Home = () => {
                         <a href="resume.pdf" target="_blank">
                             <FontAwesomeIcon className="icon" icon={faArrowAltCircleDown} />
                         </a>
-                        <Link href="/contact">
+                        <Link href="/contact" prefetch={false}>
                             <Button className="button">
                                 Contact Me
                             </Button>
@@ -27,7 +27,7 @@ const Home = () => {
                     </Box>
                     <Wave className="wave" fill="url(#gradient)" options={{ amplitude: 30, speed: 0.25, points: 4 }}>
                         <defs>
-                            <linearGradient id="gradient" gradientTransform="rotate(90deg)">
+                            <linearGradient id="gradient" gradientTransform="rotate(90)">
                                 <stop offset="10%" stopColor="#552586" />
                                 <stop offset="90%" stopColor="#B589D6" />
                             </linearGradient>
@@ -108,9 +108,9 @@ const HomeStyled = styled.div`
 
     .wave {
         height: 50vh;
-
         @media(max-width: 768px) {
-            height: 30vh;
+            visibility: hidden;
+            /* height: 30vh; */
         }
     }
 `
