@@ -1,43 +1,44 @@
 {
-  "_app.js -> components/ContextWrapper": {
-    "id": "frR5",
+  "../node_modules/next/dist/client/next-dev.js -> ./dev/noop": {
+    "id": "./node_modules/next/dist/client/dev/noop.js",
     "files": [
-      "static/chunks/20.71c773d3af4ecd05f8f5.js"
+      "static/chunks/3.js"
+    ]
+  },
+  "_app.js -> components/ContextWrapper": {
+    "id": "./components/ContextWrapper.js",
+    "files": [
+      "static/chunks/2.js"
     ]
   },
   "_app.js -> components/GlobalStyles/GlobalStyles": {
-    "id": "nGFE",
+    "id": "./components/GlobalStyles/GlobalStyles.js",
     "files": [
-      "static/chunks/commons.2a4e1b44452c3f97749f.js",
-      "static/chunks/19.7ffe11a8adf5eef74f45.js"
+      "static/chunks/1.js"
     ]
   },
   "_app.js -> components/Header": {
-    "id": "b0oO",
+    "id": "./components/Header.js",
     "files": [
-      "static/chunks/framework.cf06773d876f83d37766.js",
-      "static/chunks/commons.2a4e1b44452c3f97749f.js",
-      "static/chunks/0666d3ac3ea1db00d9df31112c32699cd60e169b.619a31cb8af6483611ca.js",
-      "static/chunks/dfb8e8b2cfd50c5c67f9c2ea79ddc8353210abaf.13a223a1d36ff28930ac.js",
-      "static/chunks/18.da3af9d09ecfd8dcda81.js"
+      "static/chunks/0.js"
     ]
   },
   "about.js -> ../components/AboutTextAnimation": {
-    "id": "wvDq",
+    "id": "./components/AboutTextAnimation.js",
     "files": [
-      "static/chunks/21.325046e0fe037b5a4284.js"
+      "static/chunks/5.js"
     ]
   },
   "about.js -> ../components/Parallax": {
-    "id": "HLIT",
+    "id": "./components/Parallax.js",
     "files": [
-      "static/chunks/22.13d86da2ddfbfb7f3c23.js"
+      "static/chunks/6.js"
     ]
   },
   "about.js -> ../components/TechnologiesUsed": {
-    "id": "8T5P",
+    "id": "./components/TechnologiesUsed.js",
     "files": [
-      "static/chunks/23.85296ce0dc55cfd49923.js"
+      "static/chunks/4.js"
     ]
   }
 }

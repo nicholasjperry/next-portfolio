@@ -53,7 +53,7 @@ function Project({ project }) {
                                 </video>
                             </Box>
                             <Box className="link-container" width={{ _: "100%", 1: "100%", 2: "120%" }}>
-                                <Link href={project.link} prefetch={false}>
+                                <Link href={project.link}>
                                     <a className="project-link" target="_blank" rel="noreferrer noopener">{linkText}</a>
                                 </Link>
                             </Box>

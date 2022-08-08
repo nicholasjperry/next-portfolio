@@ -1,6 +1,5 @@
 import styled from '@emotion/styled';
 import { Flex, Box } from 'reflexbox';
-import Image from 'next/image';
 import HeaderMotion from '../components/HeaderMotion';
 
 import dynamic from 'next/dynamic';
@@ -29,12 +28,11 @@ function About({ technologies }) {
                         flexDirection={{ _: "column", 1: "column", 2: "row" }}
                     >
                         <Box className="image-container" width={{ _: "60%" }}>
-                            <Image 
+                            <img 
                                 src="/images/mtbeldfordpic2.jpeg" alt="" 
                                 width={450} 
                                 height={600}
                                 className="image"
-                                priority={true}
                             />
                         </Box>
                         <Box as="h2" className="paragraph-container" width={{ _: "60%" }}>
@@ -59,12 +57,10 @@ function About({ technologies }) {
                         flexDirection={{ _: "column", 1: "column", 2: "row" }}
                     >
                         <Box className="logo-container" width={{ _: "100%", 1: "50%" }}>
-                            <Image
+                            <img
                                 src="/images/nucamplogo2.svg" alt=""
                                 width={500}
                                 height={150}
-                                priority={true}
-                                placeholder="blur"
                             />
                         </Box>
                         <Box className="paragraph-container" sx={{ textAlign: "left", color: "#fff", fontSize: "25px", marginBottom: 200 }} width={{ _: "100%", 1: "70%" }}>

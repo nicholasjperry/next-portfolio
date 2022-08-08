@@ -18,13 +18,13 @@ function Navigation() {
         <>
             <NavigationStyled color={color} isOpen={isOpen}>
                 <Box className="nav-container">
-                    <Link href="/" prefetch={false}><a>NP</a></Link>
+                    <Link href="/"><a>NP</a></Link>
                 </Box>
                 <Box className="menu-container">
                     <ul>
                         {menuItems.map(item => (
                             <li key={item.id}>
-                                <Link href={item.slug} prefetch={false}>
+                                <Link href={item.slug}>
                                     <a className={router.pathname === item.slug ? 'active' : '' }>{item.title}</a>  
                                 </Link>
                             </li>

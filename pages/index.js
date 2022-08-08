@@ -19,7 +19,7 @@ const Home = () => {
                         <a href="resume.pdf" target="_blank">
                             <FontAwesomeIcon className="icon" icon={faArrowAltCircleDown} />
                         </a>
-                        <Link href="/contact" prefetch={false}>
+                        <Link href="/contact">
                             <Button className="button">
                                 Contact Me
                             </Button>
