@@ -1,6 +1,5 @@
 import styled from '@emotion/styled';
 import { Flex, Box } from 'reflexbox';
-import HeaderMotion from '../components/HeaderMotion';
 
 import dynamic from 'next/dynamic';
 const DynamicTechnologiesUsed = dynamic(() => import('../components/TechnologiesUsed'));
@@ -12,9 +11,7 @@ function About({ technologies }) {
     return(
         <Box className="background">
             <AboutStyled>
-                <HeaderMotion>
-                    <h1>About Me</h1>
-                </HeaderMotion>
+                <h1>About Me</h1>
                 <Box sx={{
                     maxWidth: 1200,
                     mx: "auto",
